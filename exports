@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-​# Use Neovim as "preferred editor"​
+# Use Neovim as "preferred editor"​
 export VISUAL=nvim
 
 # Enable persistent REPL history for `node`.
