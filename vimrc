@@ -23,7 +23,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 " Autocomplete
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'           " Add extra config at .ycm_extra_conf.py at root of project
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
@@ -162,13 +162,3 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
 set wildignore+=.git\*,.hg\*,.svn\*
 endif
-
-" python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
