@@ -48,10 +48,7 @@ export SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
 export SPACESHIP_PROMPT_DEFAULT_SUFFIX=' '
 export SPACESHIP_KUBECONTEXT_SHOW=false
 
-# pyenv
-eval "$(pyenv init -)"
-
-# asdf
+# asdf - version manager for multiple languages
 autoload -Uz compinit && compinit
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash

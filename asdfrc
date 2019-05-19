@@ -1,0 +1,2 @@
+# cause plugins that support this feature to read the version files used by other version managers
+legacy_version_file = yes
