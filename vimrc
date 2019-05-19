@@ -22,8 +22,8 @@ Plug 'morhetz/gruvbox'                  " For cool colors
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
-" Python
-Plug 'davidhalter/jedi-vim'
+" Autocomplete
+Plug 'Valloric/YouCompleteMe'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
@@ -162,3 +162,13 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
 set wildignore+=.git\*,.hg\*,.svn\*
 endif
+
+" python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
