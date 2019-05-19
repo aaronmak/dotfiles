@@ -54,10 +54,6 @@ tnoremap <Esc> <C-\><C-n>
 nmap j gj
 nmap k gk
 
-" Make CtrlP use ag for listing the files. Way faster and no useless files.
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-
 " =======================
 " Settings
 " =======================
@@ -114,10 +110,6 @@ if &t_Co > 2 || has("gui_running")
   set termguicolors
 endif
 
-" Set color and theme
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
 " =======================
 " Text
 " =======================
@@ -172,3 +164,12 @@ endif
 " vim-test
 let test#neovim#term_position = "vertical botright"
 let test#strategy = "neovim"
+
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
+" Set color and theme
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+let g:airline#extensions#tabline#enabled = 1
