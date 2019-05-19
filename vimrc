@@ -24,6 +24,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 " Autocomplete
 Plug 'Valloric/YouCompleteMe'           " Add extra config at .ycm_extra_conf.py at root of project
+" Testing
+Plug 'janko/vim-test'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
@@ -35,7 +37,7 @@ call plug#end()
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
-map <C-h> :nohl<cr>                               " Fast switch off highlights
+map <C-h>:nohl<cr>                                " Fast switch off highlights
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>                             " Fast saving
@@ -162,3 +164,11 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
 set wildignore+=.git\*,.hg\*,.svn\*
 endif
+
+" =======================
+" Plugins Configuration
+" =======================
+
+" vim-test
+let test#neovim#term_position = "vertical botright"
+let test#strategy = "neovim"
