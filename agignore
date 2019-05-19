@@ -1,0 +1,14 @@
+log
+vendor
+tmp
+doc
+coverage
+public/assets
+/.git/
+*.svg
+public/fonts
+tags
+out
+node_modules
+venv
+.venv
