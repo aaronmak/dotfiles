@@ -10,17 +10,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'airblade/vim-gitgutter'
+" Convenience
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'morhetz/gruvbox'       " For cool colors
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'thoughtbot/vim-rspec'
+" Improve display
+Plug 'airblade/vim-gitgutter'
+Plug 'morhetz/gruvbox'                  " For cool colors
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+" Python
+Plug 'davidhalter/jedi-vim'
+" Rails
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
 call plug#end()
 
 " =======================

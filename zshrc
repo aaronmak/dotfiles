@@ -48,5 +48,14 @@ export SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
 export SPACESHIP_PROMPT_DEFAULT_SUFFIX=' '
 export SPACESHIP_KUBECONTEXT_SHOW=false
 
+# pyenv
+eval "$(pyenv init -)"
+
+# asdf
+autoload -Uz compinit && compinit
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 source $ZSH/oh-my-zsh.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
