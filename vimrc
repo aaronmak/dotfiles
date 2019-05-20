@@ -46,6 +46,12 @@ nmap <C-s> :w<cr>
 nmap <leader>vi :tabedit ~/.vimrc<cr>             " Edit your vimrc in a new tab
 nmap <leader>so :source $MYVIMRC<cr>              " Source (reload) your vimrc
 
+" Git
+nmap <leader>g :G<cr>
+nmap <leader>ga :Git commit --amend --reuse-message=HEAD<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>gpf :Git push --force-with-lease<cr>
+
 " Terminal shortcuts
 " > Map <ESC>
 tnoremap <Esc> <C-\><C-n>

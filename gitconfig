@@ -1,3 +1,7 @@
+[user]
+    name = Aaron Mak
+    email = aaronmakks@gmail.com
+
 [alias]
 
     # View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -101,8 +105,6 @@
 
 [color]
 
-    # Use colors in Git commands that are capable of colored output when
-    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
     ui = auto
 
 [color "branch"]
@@ -169,8 +171,3 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
-
-[user]
-    # Each commit will have the following details
-    name = Aaron Mak
-    email = aaronmakks@gmail.com
