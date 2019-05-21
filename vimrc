@@ -124,6 +124,9 @@ if &t_Co > 2 || has("gui_running")
   set termguicolors
 endif
 
+" Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+
 " =======================
 " Text
 " =======================
