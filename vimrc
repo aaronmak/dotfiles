@@ -108,6 +108,12 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Spelling for Markdown and gitcommits
+augroup markdownSpell
+  autocmd FileType gitcommit setlocal spell
+  autocmd FileType markdown setlocal spell
+augroup END
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
