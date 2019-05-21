@@ -19,9 +19,6 @@ plugins=(
   github
   jsontools
   kubectl
-  node
-  python
-  rails
   tmux
   tmuxinator
   z
