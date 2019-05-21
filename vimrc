@@ -37,7 +37,7 @@ call plug#end()
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
-map <C-h>:nohl<cr>                                " Fast switch off highlights
+map <C-h> :nohl<cr>                               " Fast switch off highlights
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>                             " Fast saving
@@ -79,7 +79,8 @@ set magic             " For regular expressions turn magic on
 set showmatch         " Show matching brackets when text indicator is over them
 set mat=2             " How many tenths of a second to blink when matching brackets
 set foldcolumn=1      " Add a bit extra margin to the left
-set nu                " Set line numbers
+set relativenumber    " Set relative line numbers
+set number            " Set line numbers
 set scrolloff=4       " Keep at least 4 lines below cursor
 
 set grepprg=ag        " Use Silver Searcher instead of grep
