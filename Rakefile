@@ -36,5 +36,5 @@ end
 
 def link_file(file)
   puts "linking ~/.#{file}"
-  system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+  system %Q{ln -nsf "$PWD/#{file}" "$HOME/.#{file}"}
 end
