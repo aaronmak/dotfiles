@@ -13,6 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Convenience
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -96,6 +97,7 @@ set smarttab   " Be smart when using tabs
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 
 " Linebreak on 500 characters
 set lbr
