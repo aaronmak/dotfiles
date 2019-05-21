@@ -66,6 +66,7 @@ nmap k gk
 set nocompatible      " Disable backward compatibility with vi
 set encoding=utf8     " Set utf8 as standard encoding and en_US as the standard language
 set ffs=unix,dos,mac  " Use Unix as the standard file type
+set hidden            " Allow buffer change w/o saving
 
 set so=7              " Set 7 lines to the cursor - when moving vertically using j/k
 set cmdheight=3       " Height of the command bar
