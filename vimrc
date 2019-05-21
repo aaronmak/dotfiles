@@ -22,8 +22,6 @@ Plug 'morhetz/gruvbox'                  " For cool colors
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
-" Autocomplete
-Plug 'Valloric/YouCompleteMe'           " Add extra config at .ycm_extra_conf.py at root of project
 " Testing
 Plug 'janko/vim-test'
 " Rails
@@ -51,10 +49,6 @@ nmap <leader>g :G<cr>
 nmap <leader>ga :Git commit --amend --reuse-message=HEAD<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gpf :Git push --force-with-lease<cr>
-
-" Terminal shortcuts
-" > Map <ESC>
-tnoremap <Esc> <C-\><C-n>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
@@ -190,18 +184,3 @@ let g:ctrlp_use_caching = 0
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
-
-" YouCompleteMe
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar': 1,
-      \ 'notes': 1,
-      \ 'markdown': 1,
-      \ 'netrw': 1,
-      \ 'unite': 1,
-      \ 'text': 1,
-      \ 'vimwiki': 1,
-      \ 'pandoc': 1,
-      \ 'infolog': 1,
-      \ 'gitcommit': 1,
-      \ 'mail': 1
-      \}
