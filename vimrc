@@ -23,6 +23,8 @@ Plug 'morhetz/gruvbox'                  " For cool colors
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
+" Autocomplete
+Plug 'Valloric/YouCompleteMe'
 " Testing
 Plug 'janko/vim-test'
 " Rails
