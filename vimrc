@@ -42,6 +42,11 @@ map <C-h> :nohl<cr>                               " Fast switch off highlights
 map <C-s> <esc>:w<CR>                             " Fast saving
 imap <C-s> <esc>:w<CR>
 nmap <C-s> :w<cr>
+
+" Switch buffers with tab
+nnoremap <Tab> :bnext!<CR>
+nnoremap <S-Tab> :bprev!<CR>
+
 nmap <leader>vi :tabedit ~/.vimrc<cr>             " Edit your vimrc in a new tab
 nmap <leader>so :source $MYVIMRC<cr>              " Source (reload) your vimrc
 
