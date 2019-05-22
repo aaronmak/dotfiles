@@ -27,6 +27,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'Valloric/YouCompleteMe'
 " Testing
 Plug 'janko/vim-test'
+" Linting
+Plug 'w0rp/ale'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
@@ -194,3 +196,6 @@ let g:ctrlp_switch_buffer = 0
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
+
+" Ale linting
+let g:ale_python_flake8_options = '--max-line-length=120'
