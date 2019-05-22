@@ -139,3 +139,4 @@ alias reload='exec $SHELL -l'
 # Use Neovim instead of Vim or Vi​
 alias vim='nvim'
 alias vi='nvim'
+
