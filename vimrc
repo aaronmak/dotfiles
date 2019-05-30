@@ -32,6 +32,8 @@ Plug 'w0rp/ale'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
+" Python
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 " =======================
