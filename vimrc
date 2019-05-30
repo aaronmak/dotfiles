@@ -51,6 +51,9 @@ nmap <C-s> :w<cr>
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR>
 
+"close current buffer
+nnoremap <leader>bq :bp <bar> bd! #<cr>
+
 nmap <leader>vi :tabedit ~/.vimrc<cr>             " Edit your vimrc in a new tab
 nmap <leader>so :source $MYVIMRC<cr>              " Source (reload) your vimrc
 
@@ -63,6 +66,32 @@ nmap <leader>gpf :Git push --force-with-lease<cr>
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
 nmap k gk
+
+" autoclose tags
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+" move to the split in the direction shown, or create a new split
+nnoremap <silent> <C-h> :call WinMove('h')<cr>
+nnoremap <silent> <C-j> :call WinMove('j')<cr>
+nnoremap <silent> <C-k> :call WinMove('k')<cr>
+nnoremap <silent> <C-l> :call WinMove('l')<cr>
+
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr())
+    if (match(a:key,'[jk]'))
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
 
 " =======================
 " Settings
