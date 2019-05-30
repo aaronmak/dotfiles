@@ -54,6 +54,9 @@ nnoremap <S-Tab> :bprev!<CR>
 "close current buffer
 nnoremap <leader>bq :bp <bar> bd! #<cr>
 
+"close all open buffers
+nnoremap <leader>bqa :bufdo bd!<cr>
+
 nmap <leader>vi :tabedit ~/.vimrc<cr>             " Edit your vimrc in a new tab
 nmap <leader>so :source $MYVIMRC<cr>              " Source (reload) your vimrc
 
