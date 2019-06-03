@@ -72,13 +72,6 @@ nmap <leader>gpf :Git push --force-with-lease<cr>
 nmap j gj
 nmap k gk
 
-" autoclose tags
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-
 " move to the split in the direction shown, or create a new split
 nnoremap <silent> <C-j> :call WinMove('j')<cr>
 nnoremap <silent> <C-k> :call WinMove('k')<cr>
