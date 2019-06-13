@@ -90,6 +90,9 @@ function! WinMove(key)
   endif
 endfunction
 
+" Delete current file
+nmap <leader>dcf :!rm %<cr>
+
 " =======================
 " Settings
 " =======================
