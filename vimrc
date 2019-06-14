@@ -192,7 +192,7 @@ function! RenameFile()
     redraw!
   endif
 endfunction
-map <Leader>n :call RenameFile()<cr>
+map <Leader>rf :call RenameFile()<cr>
 
 " Copy to system clipboard
 vnoremap <C-c> "+y
