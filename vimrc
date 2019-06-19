@@ -93,6 +93,9 @@ endfunction
 " Delete current file
 nmap <leader>dcf :!rm %<cr>
 
+" Copy all
+nmap <leader>co :%y+<cr>
+
 " =======================
 " Settings
 " =======================
