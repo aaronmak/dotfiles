@@ -140,3 +140,5 @@ alias reload='exec $SHELL -l'
 alias vim='nvim'
 alias vi='nvim'
 
+# Use bat instead of cat
+alias cat='bat'
