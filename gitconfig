@@ -150,6 +150,13 @@
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
 
+[filter "lfs"]
+
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 # URL shorthands
 
 [url "git@github.com:"]
