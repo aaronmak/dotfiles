@@ -137,8 +137,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload='exec $SHELL -l'
 
 # Use Neovim instead of Vim or Vi​
-alias vim='nvim'
-alias vi='nvim'
+alias vim="nvim"
+alias vi="nvim"
 
 # Use bat instead of cat
-alias cat='bat'
+alias cat="bat"
+
+# Terraform alias
+alias tf="terraform"
