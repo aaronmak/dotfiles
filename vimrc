@@ -36,6 +36,9 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " =======================
@@ -69,6 +72,9 @@ nmap <leader>g :G<cr>
 nmap <leader>ga :Git commit --amend --reuse-message=HEAD<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gpf :Git push --force-with-lease<cr>
+
+" Fzf
+nmap <leader>rg :Rg<Space>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
