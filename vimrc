@@ -15,6 +15,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 " Improve display
