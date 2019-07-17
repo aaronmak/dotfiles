@@ -35,6 +35,8 @@ Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+"GraphQL
+Plug 'jparise/vim-graphql'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
 " fzf
