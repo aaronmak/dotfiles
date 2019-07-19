@@ -117,7 +117,7 @@ set hidden            " Allow buffer change w/o saving
 
 set so=7              " Set 7 lines to the cursor - when moving vertically using j/k
 set cmdheight=3       " Height of the command bar
-
+set updatetime=300    " Reduce update time from default of 4000
 set autoread          " Auto read when a file is changed from elsewhere
 set ignorecase        " Ignore case when searching
 set smartcase         " When searching try to be smart about cases
@@ -130,7 +130,7 @@ set foldcolumn=1      " Add a bit extra margin to the left
 set relativenumber    " Set relative line numbers
 set number            " Set line numbers
 set scrolloff=4       " Keep at least 4 lines below cursor
-
+set signcolumn=yes    " always show signcolumns
 set grepprg=ag        " Use Silver Searcher instead of grep
 
 " No annoying sound on errors
@@ -141,6 +141,7 @@ set tm=500
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
+set nowritebackup
 set nowb
 set noswapfile
 
