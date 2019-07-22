@@ -84,6 +84,9 @@ nmap <leader>ga :Git commit --amend --reuse-message=HEAD<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gpf :Git push --force-with-lease<cr>
 
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 " Fzf
 nmap <leader>rg :Rg<Space>
 
