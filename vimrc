@@ -25,7 +25,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 " Autocomplete
-Plug 'Valloric/YouCompleteMe'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-jedi'
 " Testing
 Plug 'janko/vim-test'
 " Linting
@@ -47,6 +54,7 @@ call plug#end()
 " =======================
 " Mapping
 " =======================
+let g:deoplete#enable_at_startup = 1
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
@@ -110,28 +118,28 @@ nmap <leader>co :%y+<cr>
 " =======================
 " Settings
 " =======================
-set nocompatible      " Disable backward compatibility with vi
-set encoding=utf8     " Set utf8 as standard encoding and en_US as the standard language
-set ffs=unix,dos,mac  " Use Unix as the standard file type
-set hidden            " Allow buffer change w/o saving
-
-set so=7              " Set 7 lines to the cursor - when moving vertically using j/k
-set cmdheight=3       " Height of the command bar
-set updatetime=300    " Reduce update time from default of 4000
-set autoread          " Auto read when a file is changed from elsewhere
-set ignorecase        " Ignore case when searching
-set smartcase         " When searching try to be smart about cases
-set incsearch         " Makes search act like search in modern browsers
-set lazyredraw        " Don't redraw while executing macros (good performance config)
-set magic             " For regular expressions turn magic on
-set showmatch         " Show matching brackets when text indicator is over them
-set mat=2             " How many tenths of a second to blink when matching brackets
-set foldcolumn=1      " Add a bit extra margin to the left
-set relativenumber    " Set relative line numbers
-set number            " Set line numbers
-set scrolloff=4       " Keep at least 4 lines below cursor
-set signcolumn=yes    " always show signcolumns
-set grepprg=ag        " Use Silver Searcher instead of grep
+set nocompatible         " Disable backward compatibility with vi
+set encoding=utf8        " Set utf8 as standard encoding and en_US as the standard language
+set ffs=unix,dos,mac     " Use Unix as the standard file type
+set hidden               " Allow buffer change w/o saving
+set so=7                 " Set 7 lines to the cursor - when moving vertically using j/k
+set cmdheight=3          " Height of the command bar
+set updatetime=300       " Reduce update time from default of 4000
+set autoread             " Auto read when a file is changed from elsewhere
+set ignorecase           " Ignore case when searching
+set smartcase            " When searching try to be smart about cases
+set incsearch            " Makes search act like search in modern browsers
+set lazyredraw           " Don't redraw while executing macros (good performance config)
+set magic                " For regular expressions turn magic on
+set showmatch            " Show matching brackets when text indicator is over them
+set mat=2                " How many tenths of a second to blink when matching brackets
+set foldcolumn=1         " Add a bit extra margin to the left
+set relativenumber       " Set relative line numbers
+set number               " Set line numbers
+set scrolloff=4          " Keep at least 4 lines below cursor
+set signcolumn=yes       " always show signcolumns
+set grepprg=ag           " Use Silver Searcher instead of grep
+set completeopt-=preview " Disable preview
 
 " No annoying sound on errors
 set noerrorbells
