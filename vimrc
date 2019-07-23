@@ -96,9 +96,10 @@ nmap j gj
 nmap k gk
 
 " move to the split in the direction shown, or create a new split
-nnoremap <silent> <C-j> :call WinMove('j')<cr>
-nnoremap <silent> <C-k> :call WinMove('k')<cr>
-nnoremap <silent> <C-l> :call WinMove('l')<cr>
+nnoremap <silent> <leader><C-h> :call WinMove('h')<cr>
+nnoremap <silent> <leader><C-j> :call WinMove('j')<cr>
+nnoremap <silent> <leader><C-k> :call WinMove('k')<cr>
+nnoremap <silent> <leader><C-l> :call WinMove('l')<cr>
 
 function! WinMove(key)
   let t:curwin = winnr()
