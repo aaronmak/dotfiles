@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'christoomey/vim-tmux-navigator'
 " Improve display
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'                  " For cool colors
