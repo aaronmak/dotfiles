@@ -59,7 +59,7 @@ let g:deoplete#enable_at_startup = 1
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
-map <C-h> :nohl<cr>                               " Fast switch off highlights
+map <C-n><C-h> :nohl<cr>                          " Fast switch off highlights
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>                             " Fast saving
