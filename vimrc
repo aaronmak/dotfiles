@@ -50,6 +50,8 @@ Plug 'editorconfig/editorconfig-vim'
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 " =======================
