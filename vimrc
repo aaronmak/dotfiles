@@ -20,6 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'christoomey/vim-tmux-navigator'
 " Improve display
+Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'                  " For cool colors
 Plug 'vim-airline/vim-airline'
@@ -258,3 +259,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Ale linting
 let g:ale_python_flake8_options = '--max-line-length=120'
+
+" diminactive
+let g:diminactive_enable_focus = 1
