@@ -61,6 +61,10 @@
     # a.k.a. ‘delete merged’
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+    # Remove branches that have missing remote branch with prompt (y to confirm)
+    # Delete remote missing
+    drm = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -p git branch -D"
+
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
 
@@ -152,10 +156,10 @@
 
 [filter "lfs"]
 
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
 # URL shorthands
 
