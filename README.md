@@ -12,3 +12,5 @@ git clone git://github.com:aaronmak/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
+
+For `ssh_config`, refer to this [repo](https://github.com/aaronmak/ssh-config).
