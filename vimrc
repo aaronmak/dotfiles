@@ -37,8 +37,10 @@ Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-"GraphQL
+" GraphQL
 Plug 'jparise/vim-graphql'
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
 " fzf
@@ -239,6 +241,9 @@ endif
 " =======================
 " Plugins Configuration
 " =======================
+
+" haskell-vim
+filetype plugin indent on
 
 " vim-test
 let test#neovim#term_position = "vertical botright"
