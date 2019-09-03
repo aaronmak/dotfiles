@@ -31,7 +31,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 " Testing
 Plug 'janko/vim-test'
 " Linting
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
