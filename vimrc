@@ -35,6 +35,8 @@ Plug 'dense-analysis/ale'
 " Rails
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
+" Django
+Plug 'tweekmonster/django-plus.vim'
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 " GraphQL
