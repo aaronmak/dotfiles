@@ -114,7 +114,3 @@ bh_unicode_properties.cache
 **/__pycache__/**
 *.pyc
 **.mypy_cache/**
-
-# ASDF #
-########
-.tool-versions
