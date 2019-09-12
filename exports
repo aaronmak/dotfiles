@@ -26,3 +26,6 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Add mysql@5.7 to PATH
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
