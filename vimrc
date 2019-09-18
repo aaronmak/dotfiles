@@ -56,6 +56,7 @@ call plug#end()
 " Mapping
 " =======================
 let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = '/Users/aaronmak/.pyenv/versions/neovim3/bin/python'
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
