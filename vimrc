@@ -39,6 +39,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tweekmonster/django-plus.vim'
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'psf/black'
 " GraphQL
 Plug 'jparise/vim-graphql'
 " Haskell
@@ -267,3 +268,6 @@ let g:ale_python_flake8_options = '--max-line-length=120'
 
 " diminactive
 let g:diminactive_enable_focus = 1
+
+" Run Black on save
+autocmd BufWritePre *.py execute ':Black'
