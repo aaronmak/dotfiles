@@ -57,7 +57,7 @@ call plug#end()
 " Mapping
 " =======================
 let g:deoplete#enable_at_startup = 1
-let g:python3_host_prog = '/Users/aaronmak/.pyenv/versions/neovim3/bin/python'
+let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
@@ -264,7 +264,7 @@ let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 
 " Ale linting
-let g:ale_python_flake8_options = '--max-line-length=120'
+let g:ale_python_auto_pipenv = 1
 
 " diminactive
 let g:diminactive_enable_focus = 1
