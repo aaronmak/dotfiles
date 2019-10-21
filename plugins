@@ -19,6 +19,7 @@ plugins=(
   github
   jsontools
   kubectl
+  ssh-agent
   tmux
   tmuxinator
   z
