@@ -1,6 +1,11 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Homebrew shell completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # Load the shell dotfiles, and then some:
 for file in ~/.{bash_prompt,exports,aliases,functions,plugins,extras}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -10,6 +15,14 @@ unset file;
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Install using homebrew first
+
+# Autoload completions
+autoload -Uz compinit && compinit
+
+# Completions for asdf - version manager for multiple languages
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# GCP completions from Homebrew
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"

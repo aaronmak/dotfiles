@@ -7,11 +7,6 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 
-# Homebrew shell completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -34,11 +29,6 @@ plugins=(
 SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
 SPACESHIP_PROMPT_DEFAULT_SUFFIX=' '
 SPACESHIP_KUBECONTEXT_SHOW=false
-
-# asdf - version manager for multiple languages
-autoload -Uz compinit && compinit
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 source $ZSH/oh-my-zsh.sh
 
