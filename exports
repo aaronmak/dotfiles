@@ -2,6 +2,7 @@
 
 # Use Neovim as "preferred editor"​
 export VISUAL=nvim
+export EDITOR=nvim
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY_FILE=~/.node_history;
