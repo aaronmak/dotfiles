@@ -1,0 +1,16 @@
+name: config
+root: ~/code/personal/
+
+windows:
+  - dotfiles:
+      root: ~/code/personal/dotfiles/
+      layout: main-vertical
+      panes:
+        - vim
+        -
+  - mac-setup:
+      root: ~/code/personal/mac-setup/
+      layout: main-vertical
+      panes:
+        - vim
+        -

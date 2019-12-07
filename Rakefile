@@ -3,9 +3,38 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
-  Dir['*'].each do |file|
-    next if %w[Rakefile README.md Session.vim LICENSE].include? file
+  mux_dir = "config/tmuxinator/"
+  mux_files = Rake::FileList.new(%Q{#{mux_dir}*.yml})
 
+  files = Rake::FileList.new("*")
+
+  files.each do |file|
+    next if %w[Rakefile README.md Session.vim LICENSE].include? file
+    next if Dir.exist? File.join(ENV['HOME'], ".#{file}")
+    if File.exist?(File.join(ENV['HOME'], ".#{file}"))
+      if replace_all
+        replace_file(file)
+      else
+        print "overwrite ~/.#{file}? [ynaq] "
+        case $stdin.gets.chomp
+        when 'a'
+          replace_all = true
+          replace_file(file)
+        when 'y'
+          replace_file(file)
+        when 'q'
+          exit
+        else
+          puts "skipping ~/.#{file}"
+        end
+      end
+    else
+      link_file(file)
+    end
+  end
+
+  mux_files.each do |file|
+    system %Q{mkdir -p ~/.#{mux_dir}}
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if replace_all
         replace_file(file)

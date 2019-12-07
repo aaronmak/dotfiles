@@ -1,0 +1,11 @@
+name: dev
+root: ~/code/personal/
+
+windows:
+  - haskell:
+      root: ~/code/personal/haskell-book-exercises
+      layout: main-vertical
+      panes:
+        - vim
+        -
+        -
