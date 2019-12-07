@@ -9,3 +9,10 @@ windows:
         - vim
         -
         -
+  - qwiser:
+      root: ~/code/personal/qwiser
+      layout: main-vertical
+      panes:
+        - vim
+        -
+        -
