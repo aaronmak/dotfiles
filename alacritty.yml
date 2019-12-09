@@ -111,7 +111,7 @@ font:
     family: Input Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Regular
 
   # Bold font face
   bold:
@@ -122,7 +122,7 @@ font:
     family: Input Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Black
+    style: Bold
 
   # Italic font face
   italic:
@@ -133,7 +133,7 @@ font:
     family: Input Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Italic
 
   # Point size
   size: 11.0
