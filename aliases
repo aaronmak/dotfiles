@@ -141,3 +141,6 @@ alias vi="nvim"
 
 # Terraform alias
 alias tf="terraform"
+
+# Tmuxinator alias
+alias mux="tmuxinator"

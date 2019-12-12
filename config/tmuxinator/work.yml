@@ -1,0 +1,38 @@
+name: work
+root: ~/code/work/
+
+on_project_start: cd ~/code/work/pandata/ && docker-compose up -d
+on_project_end: cd ~/code/work/pandata/ && docker-compose down
+
+windows:
+  - pandata:
+      root: ~/code/work/pandata/
+      layout: main-vertical
+      panes:
+        - vim -S
+        -
+        -
+  - pandata-env:
+      root: ~/code/work/pandata-env/
+      layout: main-vertical
+      panes:
+        - vim -S
+        - watch kubectl get pods
+        -
+  - helm-charts:
+      root: ~/code/work/charts/
+      layout: main-vertical
+      panes:
+        - vim -S
+        -
+  - airflow:
+      root: ~/code/work/airflow/
+      layout: main-vertical
+      panes:
+        - vim
+        -
+  - misc:
+      layout: main-vertical
+      panes:
+        -
+        -
