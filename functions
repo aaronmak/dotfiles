@@ -23,3 +23,7 @@ append_to_zshrc() {
     fi
   fi
 }
+
+git_rebase_pr() {
+  hub api -X PUT repos/{owner}/{repo}/pulls/$1/merge -f merge_method=rebase
+}
