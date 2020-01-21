@@ -1,6 +1,7 @@
 [user]
     name = Aaron Mak
     email = aaronmakks@gmail.com
+    signingkey = FBF505735F73B446
 
 [alias]
 
@@ -130,10 +131,18 @@
     changed = green
     untracked = cyan
 
+[commit]
+
+    gpgsign = true
+
 [diff]
 
     # Detect copies as well as renames
     renames = copies
+
+[gpg]
+
+    program = gpg
 
 [help]
 

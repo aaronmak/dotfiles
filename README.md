@@ -14,3 +14,5 @@ rake install
 ```
 
 For `ssh_config`, refer to this [repo](https://github.com/aaronmak/ssh-config).
+
+Don't forget to add your gpg and ssh keys before proceeding.
