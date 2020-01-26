@@ -44,6 +44,9 @@ Plug 'psf/black'
 Plug 'jparise/vim-graphql'
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
+" Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
 " fzf
