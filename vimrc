@@ -28,6 +28,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'deoplete-plugins/deoplete-jedi'
+" All languages syntax
+Plug 'sheerun/vim-polyglot'
 " Testing
 Plug 'janko/vim-test'
 " Linting
@@ -268,6 +270,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Ale linting
 let g:ale_python_auto_pipenv = 1
+let g:ale_linters = {'dart': ['language_server']}
+let g:ale_fixers = {'dart': ['dartfmt']}
+let g:ale_fix_on_save = 1
 
 " diminactive
 let g:diminactive_enable_focus = 1
