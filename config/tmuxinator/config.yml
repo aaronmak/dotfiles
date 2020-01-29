@@ -14,3 +14,9 @@ windows:
       panes:
         - vim
         -
+  - snippets:
+      root: ~/code/personal/snippets/
+      layout: main-vertical
+      panes:
+        - vim
+        -
