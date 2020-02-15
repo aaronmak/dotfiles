@@ -67,7 +67,7 @@ let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
-map <C-n><C-h> :nohl<cr>                          " Fast switch off highlights
+map <C-n><C-h> :nohlsearch<cr>                          " Fast switch off highlights
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>                             " Fast saving
