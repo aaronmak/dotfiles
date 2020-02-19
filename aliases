@@ -75,6 +75,9 @@ jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources
 [ -e "${jscbin}" ] && alias jsc="${jscbin}";
 unset jscbin;
 
+# use gdate instead of date
+alias date=gdate
+
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
