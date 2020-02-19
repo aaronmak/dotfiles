@@ -127,6 +127,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Github
 alias gprrb="git_rebase_pr"
+alias gprm="git_merge_pr"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
