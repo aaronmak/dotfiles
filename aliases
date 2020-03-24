@@ -131,6 +131,8 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # Github
 alias gprrb="git_rebase_pr"
 alias gprm="git_merge_pr"
+# Merge PR with Release in title
+alias grelease="git_merge_pr $(hub pr list | grep Release | awk '{print $1}' | cut -c2-)"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
