@@ -18,6 +18,7 @@ windows:
       panes:
         - vim -S
         - watch kubectl get pods
+        - watch -n 30 gh pr list
         -
   - helm-charts:
       root: ~/code/work/charts/
