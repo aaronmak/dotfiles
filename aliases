@@ -76,6 +76,7 @@ jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources
 unset jscbin;
 
 # use gdate instead of date
+alias gdate=/bin/date
 alias date=gdate
 
 # Trim new lines and copy to clipboard
