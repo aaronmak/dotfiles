@@ -282,3 +282,6 @@ let g:diminactive_enable_focus = 1
 
 " Run Black on save
 autocmd BufWritePre *.py execute ':Black'
+
+" Reveal hidden characters in Normal and Visual mode
+let g:indentLine_concealcursor = "n"
