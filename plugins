@@ -14,6 +14,8 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   bundler
+  docker
+  docker-compose
   git
   github
   jsontools
