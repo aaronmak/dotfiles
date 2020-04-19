@@ -1,8 +1,8 @@
 name: work
 root: ~/code/work/
 
-on_project_start: cd ~/code/work/pandata/ && docker-compose up -d
-on_project_end: cd ~/code/work/pandata/ && docker-compose down
+on_project_start: cd ~/code/work/pandata
+on_project_end: cd ~/code/work/pandata
 
 windows:
   - pandata:
