@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Add `/snap/bin` to PATH for Ubuntu
+export PATH="/snap/bin:$PATH";
+
 # Homebrew shell completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
