@@ -42,7 +42,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tweekmonster/django-plus.vim'
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'psf/black'
+Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' }
 " GraphQL
 Plug 'jparise/vim-graphql'
 " Haskell
