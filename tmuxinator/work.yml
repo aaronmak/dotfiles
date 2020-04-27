@@ -32,6 +32,12 @@ windows:
       panes:
         - vim
         -
+  - logistics-airflow:
+      root: ~/code/work/logistics-airflow/
+      layout: main-vertical
+      panes:
+        - vim
+        -
   - misc:
       layout: main-vertical
       panes:
