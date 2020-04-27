@@ -4,6 +4,9 @@ export PATH="$HOME/bin:$PATH";
 # Add `/snap/bin` to PATH for Ubuntu
 export PATH="/snap/bin:$PATH";
 
+# Add krew for kubectl plugins (https://krew.sigs.k8s.io/)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # Homebrew shell completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
