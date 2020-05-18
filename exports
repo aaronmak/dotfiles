@@ -29,3 +29,5 @@ export MANPAGER='less -X';
 
 # Add mysql@5.7 to PATH
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
