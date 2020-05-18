@@ -32,3 +32,6 @@ autoload -U +X bashcompinit && bashcompinit
 
 # Completions for terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+# Load pyenv
+eval "$(pyenv init -)"
