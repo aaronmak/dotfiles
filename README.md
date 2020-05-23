@@ -7,7 +7,7 @@ Some of the dotfiles are dependent on https://github.com/aaronmak/mac-setup.
 
 ## Installation
 
-```shell
+```bash
 git clone git://github.com:aaronmak/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
