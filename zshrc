@@ -35,3 +35,6 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 # Load pyenv
 eval "$(pyenv init -)"
+
+# Add nix
+. /Users/a.mak/.nix-profile/etc/profile.d/nix.sh
