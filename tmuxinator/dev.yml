@@ -16,3 +16,10 @@ windows:
         - vim
         -
         -
+  - blog:
+      root: ~/code/personal/ghost-theme
+      layout: main-vertical
+      panes:
+        - vim
+        -
+        -
