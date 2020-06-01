@@ -20,6 +20,12 @@ windows:
         - watch kubectl get pods
         - watch -n 30 gh pr list
         -
+  - infra:
+      root: ~/code/work/apac-data-infra/
+      layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
+      panes:
+        - vim -S
+        -
   - helm-charts:
       root: ~/code/work/charts/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
