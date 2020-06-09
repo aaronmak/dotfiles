@@ -38,8 +38,8 @@ windows:
       panes:
         - vim
         -
-  - logistics-airflow:
-      root: ~/code/work/logistics-airflow/
+  - datahub-airflow:
+      root: ~/code/work/datahub-airflow/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
         - vim
