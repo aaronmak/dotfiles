@@ -21,7 +21,7 @@ windows:
         - watch -n 30 gh pr list
         -
   - infra:
-      root: ~/code/work/apac-data-infra/
+      root: ~/code/work/pandata-infra/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
         - vim -S
