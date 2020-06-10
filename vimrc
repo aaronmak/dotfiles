@@ -198,9 +198,8 @@ endif
 " Bind `q` to close the buffer for help files
 autocmd Filetype help nnoremap <buffer> q :q<CR>
 
-" Per default, netrw leaves unmodified buffers open. This autocommand
-" deletes netrw's buffer once it's hidden (using ':q', for example)
-autocmd FileType netrw setl bufhidden=delete
+" Disable netrw
+let loaded_netrwPlugin = 1
 
 " =======================
 " Text
