@@ -234,6 +234,14 @@ function! RenameFile()
 endfunction
 map <Leader>rf :call RenameFile()<cr>
 
+function! CopyMatches(reg)
+  let hits = []
+  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
+  let reg = empty(a:reg) ? '+' : a:reg
+  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
+endfunction
+command! -register CopyMatches call CopyMatches(<q-reg>)et conceallevel=0
+
 " Copy to system clipboard
 vnoremap <C-c> "+y
 
@@ -285,4 +293,3 @@ autocmd BufWritePre *.py execute ':Black'
 " Vim Polygot
 " Remove conceal for markdown
 let g:vim_markdown_conceal = 0
-set conceallevel=0
