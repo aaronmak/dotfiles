@@ -13,6 +13,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/vim-easy-align'
 " Improve display
 Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
