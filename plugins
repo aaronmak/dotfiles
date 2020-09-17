@@ -17,7 +17,6 @@ plugins=(
   docker
   docker-compose
   git
-  github
   jsontools
   kubectl
   ripgrep
