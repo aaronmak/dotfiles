@@ -84,6 +84,8 @@
         fi \
     }; f"
 
+  cpr = "!gh pr create -f"
+
 [apply]
 
     # Detect whitespace errors when applying a patch
