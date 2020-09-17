@@ -24,16 +24,15 @@ append_to_zshrc() {
   fi
 }
 
-git_rebase_pr() {
-  hub api -X PUT repos/{owner}/{repo}/pulls/$1/merge -f merge_method=rebase
-}
-
-git_merge_pr() {
-  hub api -X PUT repos/{owner}/{repo}/pulls/$1/merge -f merge_method=merge
-}
-
 grelease() {
-  PR=$(hub pr list | grep Release | awk '{print $1}' | cut -c2-)
-  echo "Merging #${PR}..."
-  git_merge_pr $PR
+  PR=$(gh pr list | grep Release | awk '{print $1}')
+  read "REPLY?Merging #${PR}... Are you sure? "
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    gh pr merge $PR
+    echo "#${PR} merged!"
+  else
+    echo "Did nothing."
+  fi
 }
