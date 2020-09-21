@@ -30,7 +30,7 @@ grelease() {
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
-    gh pr merge $PR
+    gh pr merge $PR --merge --delete-branch=false
     echo "#${PR} merged!"
   else
     echo "Did nothing."
