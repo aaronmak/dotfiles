@@ -29,7 +29,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'deoplete-plugins/deoplete-jedi'
 " All languages syntax
 Plug 'sheerun/vim-polyglot'
 " Testing
@@ -42,6 +41,7 @@ Plug 'thoughtbot/vim-rspec'
 " Django
 Plug 'tweekmonster/django-plus.vim'
 " Python
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'psf/black', { 'commit': 'ce14fa8b497bae2b50ec48b3bd7022573a59cdb1' }
 " GraphQL
