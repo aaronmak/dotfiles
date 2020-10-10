@@ -7,6 +7,9 @@ export PATH="/snap/bin:$PATH";
 # Add krew for kubectl plugins (https://krew.sigs.k8s.io/)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# Add gnu coreutils to path. Utils are prefixed with `g`
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
 # Homebrew shell completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
