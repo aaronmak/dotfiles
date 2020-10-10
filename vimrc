@@ -96,6 +96,7 @@ nmap <leader>gpf :Git push --force-with-lease<cr>
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Fzf
 nmap <leader>rg :Rg<Space>
