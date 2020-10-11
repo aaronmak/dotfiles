@@ -36,7 +36,11 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 # Load pyenv
-eval "$(pyenv init -)"
+if command pyenv &>/dev/null
+then
+  eval "$(pyenv init -)"
+  exit
+fi
 
 # Add nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
