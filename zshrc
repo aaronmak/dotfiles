@@ -28,10 +28,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
-# Completions for asdf - version manager for multiple languages
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 # Completions for terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
 
