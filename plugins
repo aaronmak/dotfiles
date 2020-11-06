@@ -17,6 +17,7 @@ plugins=(
   docker
   docker-compose
   git
+  gitfast
   kubectl
   ripgrep
   ssh-agent
