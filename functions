@@ -36,3 +36,31 @@ grelease() {
     echo "Did nothing."
   fi
 }
+
+# Creates a new virtualenv if python version is given,
+# and always tries to activate the virtualenv based on
+# the directory name
+venv() {
+  PYTHON_VERSION=$1
+  VENV_NAME=$(basename $PWD | tr . -)
+  VIRTUALENVS_DIR=${HOME}/.virtualenvs
+  VIRTUALENV_PATH=${VIRTUALENVS_DIR}/${VENV_NAME}
+  PYTHON_BIN=${ASDF_DIR}/installs/python/${PYTHON_VERSION}/bin/python
+  if [ ! -z "$PYTHON_VERSION" ]; then
+    if [ ! -f ${PYTHON_BIN} ]; then
+      echo "Python version $PYTHON_VERSION is not installed."
+      return 1
+    fi
+    if [ ! -d ${VIRTUALENV_PATH} ]; then
+      echo "Creating virtualenv ${VENV_NAME}..."
+      ${PYTHON_BIN} -m venv ${VIRTUALENV_PATH}
+    fi
+  fi
+  source ${VIRTUALENV_PATH}/bin/activate
+  echo "virtualenv activated: ${VENV_NAME}"
+}
+
+venv_remove() {
+  VENV_NAME=$(basename $PWD | tr . -)
+  rm -rf ${HOME}/.virtualenvs/${VENV_NAME}
+}
