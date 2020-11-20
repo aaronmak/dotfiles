@@ -64,3 +64,12 @@ venv_remove() {
   VENV_NAME=$(basename $PWD | tr . -)
   rm -rf ${HOME}/.virtualenvs/${VENV_NAME}
 }
+
+mk_neovim_venv() {
+  PYTHON_VERSION=$1
+  DIR=~/code/personal/neovim
+  mkdir -p ${DIR}
+  cd ${DIR}
+  venv ${PYTHON_VERSION}
+  pip install neovim
+}
