@@ -34,6 +34,3 @@ SPACESHIP_KUBECONTEXT_SHOW=false
 SPACESHIP_RUBY_SHOW=false
 
 source $ZSH/oh-my-zsh.sh
-
-# fzf
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
