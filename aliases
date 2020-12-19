@@ -104,3 +104,7 @@ alias mux="tmuxinator"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+
+# Git shortcuts
+alias gcob='git branch | fzf -i | xargs git checkout'
+alias gcoba='git branch --all | fzf -i | sed "s/remotes\/.*\///" | xargs git checkout'
