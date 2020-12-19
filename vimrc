@@ -276,10 +276,10 @@ let g:ctrlp_switch_buffer = 0
 
 " Set color and theme
 let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1
-let g:gruvbox_contrast_dark = 'hard'
 
 " Ale linting
 let g:ale_python_auto_pipenv = 1
