@@ -99,7 +99,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Fzf
-nmap <leader>rg :Rg<Space>
+nmap \ :Rg<Space>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
