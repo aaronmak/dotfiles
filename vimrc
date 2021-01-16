@@ -4,16 +4,17 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 " Convenience
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
 " Improve display
 Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
