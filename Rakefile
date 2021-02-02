@@ -3,19 +3,11 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   $replace_all = false
-  mux_dir = "config/tmuxinator/"
-  mux_files = Rake::FileList.new(%Q{#{mux_dir}*.yml})
-
   files = Rake::FileList.new("*")
 
   files.each do |file|
     next if %w[Rakefile README.md Session.vim LICENSE].include? file
     next if Dir.exist? File.join(ENV['HOME'], ".#{file}")
-    replace_confirm(file)
-  end
-
-  mux_files.each do |file|
-    system %Q{mkdir -p ~/.#{mux_dir}}
     replace_confirm(file)
   end
 end
