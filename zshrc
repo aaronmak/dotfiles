@@ -16,7 +16,7 @@ if type brew &>/dev/null; then
 fi
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{bash_prompt,exports,aliases,functions,plugins,extras}; do
+for file in ~/.{bash_prompt,exports,aliases,functions,extras}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
