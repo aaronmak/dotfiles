@@ -6,20 +6,13 @@ windows:
       root: ~/code/personal/haskell-book-exercises
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim
-        -
-        -
-  - qwiser:
-      root: ~/code/personal/qwiser
-      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
-      panes:
-        - vim
+        - git fetch --prune && vim -S
         -
         -
   - blog:
       root: ~/code/personal/ghost-theme
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim
+        - git fetch --prune && vim -S
         -
         -

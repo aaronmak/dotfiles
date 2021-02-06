@@ -9,17 +9,17 @@ windows:
       root: ~/code/personal/dotfiles/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - vim
+        - git fetch --prune && vim -S
         -
   - mac-setup:
       root: ~/code/personal/mac-setup/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - vim
+        - git fetch --prune && vim -S
         -
   - snippets:
       root: ~/code/personal/snippets/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - vim
+        - git fetch --prune && vim -S
         -

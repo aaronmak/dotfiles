@@ -24,7 +24,7 @@ append_to_zshrc() {
   fi
 }
 
-function grename() {
+grename() {
   if [[ -z "$1" || -z "$2" ]]; then
     echo "Usage: $0 old_branch new_branch"
     return 1
@@ -86,4 +86,22 @@ mk_neovim_venv() {
   cd ${DIR}
   venv ${PYTHON_VERSION}
   pip install neovim
+}
+
+clone_repos() {
+  mkdir -p ~/code/personal
+  mkdir -p ~/code/work
+  cd ~/code/personal/ && \
+    git clone git@github.com:aaronmak/dotfiles.git || \
+    git clone git@github.com:aaronmak/mac-setup.git || \
+    git clone git@github.com:aaronmak/snippets.git
+
+  cd ~/code/work/ && \
+    git clone git@github.com:deliveryhero/pandata.git || \
+    git clone git@github.com:deliveryhero/pandata-env.git || \
+    git clone git@github.com:deliveryhero/pandata-infra.git || \
+    git clone git@github.com:deliveryhero/pandata-pyspark.git || \
+    git clone git@github.com:deliveryhero/datahub-airflow.git || \
+    git clone git@github.com:helm/charts.git || \
+    git clone git@github.com:apache/airflow.git
 }
