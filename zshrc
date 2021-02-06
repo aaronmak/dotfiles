@@ -61,5 +61,8 @@ if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
 fi
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
+  . $(brew --prefix)/etc/profile.d/z.sh
+fi
 
 eval "$(starship init zsh)"
