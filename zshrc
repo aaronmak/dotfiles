@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export PATH="/usr/local/bin:$PATH";
+export PATH="/usr/local/sbin:$PATH"
 
 # Add `/snap/bin` to PATH for Ubuntu
 export PATH="/snap/bin:$PATH";
