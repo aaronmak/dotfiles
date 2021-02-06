@@ -109,6 +109,7 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
 # Git shortcuts
+alias ga='git add'
 alias gaa='git add --all'
 alias gapa='git add --patch'
 alias gc='git commit --verbose'
