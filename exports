@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Use Neovim as "preferred editor"​
 export VISUAL=nvim
@@ -31,3 +31,7 @@ export MANPAGER='less -X';
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# asdf version manager
+export ASDF_DIR="${HOME}/.asdf"
+export ASDF_COMPLETIONS="${ASDF_DIR}/completions"

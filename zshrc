@@ -49,3 +49,17 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+
+# Load asdf command
+if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
+    . "$ASDF_DIR/asdf.sh"
+
+    # Load completions
+    if [[ -f "$ASDF_COMPLETIONS/asdf.bash" ]]; then
+        . "$ASDF_COMPLETIONS/asdf.bash"
+    fi
+fi
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+eval "$(starship init zsh)"
