@@ -9,49 +9,49 @@ windows:
       root: ~/code/work/pandata/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
         -
   - pandata-env:
       root: ~/code/work/pandata-env/
       layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
       panes:
-        - git fetch --prune && vim -S
+        - vim -S
         - watch -n 30 gh pr list
-        -
+        - git fetch --prune
         -
   - infra:
       root: ~/code/work/pandata-infra/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
   - helm-charts:
       root: ~/code/work/charts/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
   - airflow:
       root: ~/code/work/airflow/
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
   - datahub-airflow:
       root: ~/code/work/datahub-airflow/
       layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
         -
         -
   - pandata-pyspark:
       root: ~/code/work/pandata-pyspark/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - git fetch --prune && vim -S
-        -
+        - vim -S
+        - git fetch --prune
         -
   - misc:
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
