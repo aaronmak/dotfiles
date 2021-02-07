@@ -32,13 +32,6 @@ autoload -U +X bashcompinit && bashcompinit
 # Completions for terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# Load pyenv
-if command pyenv &>/dev/null
-then
-  eval "$(pyenv init -)"
-  exit
-fi
-
 # Add nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
 
@@ -60,9 +53,11 @@ if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
     fi
 fi
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-if [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
-  . $(brew --prefix)/etc/profile.d/z.sh
+if type brew &>/dev/null; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  if [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
+    . $(brew --prefix)/etc/profile.d/z.sh
+  fi
 fi
 
 eval "$(starship init zsh)"
