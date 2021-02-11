@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 fancy_echo() {
   local fmt="$1"; shift
 
