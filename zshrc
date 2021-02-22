@@ -44,9 +44,7 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
 # Load asdf command
-if type brew &>/dev/null; then
-  export ASDF_DIR=$(brew --prefix asdf);
-fi
+export ASDF_DIR="${HOME}/.asdf"
 
 if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
     . "$ASDF_DIR/asdf.sh"
