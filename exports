@@ -8,7 +8,8 @@ export EDITOR=nvim
 export NODE_REPL_HISTORY_FILE=~/.node_history;
 export NODE_REPL_HISTORY_SIZE='50000';
 
-export HISTSIZE='50000';
+export HISTSIZE=1000000;
+export SAVEHIST=$HISTSIZE;
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
