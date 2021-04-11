@@ -61,6 +61,20 @@ windows:
         - vim -S
         - git fetch --prune
         -
+  - pd-infra-tf:
+      root: ~/code/work/pd-infra-terraform/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
+  - pd-devops:
+      root: ~/code/work/pd-devops/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
   - misc:
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
