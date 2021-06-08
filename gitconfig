@@ -84,7 +84,10 @@
         fi \
     }; f"
 
-  cpr = "!gh pr create -f && gh pr view --web"
+    cpr = "!f() { \
+        gh pr create --base $1 -f && \
+        gh pr view --web; \
+    }; f"
 
 [apply]
 
