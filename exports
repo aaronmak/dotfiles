@@ -30,3 +30,6 @@ export MANPAGER='less -X';
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# For linux paths
+export PATH="/home/aaronmak/.local/bin:$PATH"
