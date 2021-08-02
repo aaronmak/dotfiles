@@ -34,7 +34,7 @@ windows:
       panes:
         - vim -S
         - git fetch --prune
-  - pandata-pyspark:
+  - pyspark:
       root: ~/code/work/pandata-pyspark/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
