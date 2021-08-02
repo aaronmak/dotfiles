@@ -62,14 +62,6 @@ windows:
         - vim -S
         - git fetch --prune
         -
-  - pandata-env:
-      root: ~/code/work/pandata-env/
-      layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
-      panes:
-        - vim -S
-        - watch -n 30 gh pr list
-        - git fetch --prune
-        -
   - misc:
       layout: abcb,274x78,0,0{190x78,0,0,38,83x78,191,0,41}
       panes:
