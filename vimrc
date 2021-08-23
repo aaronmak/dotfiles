@@ -49,6 +49,8 @@ Plug 'psf/black'
 Plug 'jparise/vim-graphql'
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Flutter
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
