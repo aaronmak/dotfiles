@@ -240,18 +240,6 @@ endif
 " Plugins Configuration
 " =======================
 
-" haskell-vim
-filetype plugin indent on
-
-" vim-test
-let test#neovim#term_position = "vertical botright"
-let test#strategy = "neovim"
-
-" Make CtrlP use rg for listing the files. Way faster and no useless files.
-let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --glob ""'
-let g:ctrlp_use_caching = 0
-let g:ctrlp_switch_buffer = 0
-
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
 colorscheme gruvbox
