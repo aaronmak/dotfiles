@@ -5,7 +5,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " Convenience
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
@@ -19,7 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
 Plug 'akinsho/bufferline.nvim'
-Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'Yggdroot/indentLine'
 " Autocomplete
 Plug 'Shougo/deoplete.nvim'
@@ -35,9 +36,6 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'psf/black'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
-" fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 " tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
@@ -79,9 +77,6 @@ nmap <leader>gpf :Git push --force-with-lease<cr>
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Fzf
-nmap \ :Rg<Space>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
@@ -288,3 +283,8 @@ EOF
 lua << EOF
 require("bufferline").setup{}
 EOF
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
