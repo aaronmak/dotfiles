@@ -18,42 +18,21 @@ Plug 'tpope/vim-surround'
 " Improve display
 Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'                  " For cool colors
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'akinsho/bufferline.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'Yggdroot/indentLine'
 " Autocomplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 " All languages syntax
-Plug 'sheerun/vim-polyglot'
-" Testing
-Plug 'janko/vim-test'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 " Linting
 Plug 'dense-analysis/ale'
-" Rails
-Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
-" Django
-Plug 'tweekmonster/django-plus.vim'
 " Python
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'psf/black'
-" GraphQL
-Plug 'jparise/vim-graphql'
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
-" Golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" Flutter
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
 " fzf
@@ -61,8 +40,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
-" Dash App
-Plug 'rizzatti/dash.vim'
 call plug#end()
 
 " =======================
@@ -200,6 +177,7 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
   set termguicolors
+  hi LineNr ctermbg=NONE guibg=NONE
 endif
 
 " Bind `q` to close the buffer for help files
@@ -279,12 +257,9 @@ let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --glob ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_switch_buffer = 0
 
-" Set color and theme
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
+" configure nvcode-color-schemes
+let g:nvcode_termcolors=256
 colorscheme gruvbox
-let g:airline_theme = 'gruvbox'
-let g:airline#extensions#tabline#enabled = 1
 
 " Ale linting
 let g:ale_python_auto_pipenv = 1
@@ -298,6 +273,18 @@ let g:diminactive_enable_focus = 1
 " Run Black on save
 autocmd BufWritePre *.py execute ':Black'
 
-" Vim Polygot
-" Remove conceal for markdown
-let g:vim_markdown_conceal = 0
+" Treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
+EOF
+
+" Bufferline
+lua << EOF
+require("bufferline").setup{}
+EOF

@@ -18,18 +18,18 @@ scrolling:
 
 font:
   normal:
-    family: Input Mono
+    family: Hack Nerd Font
     style: Regular
 
   bold:
-    family: Input Mono
+    family: Hack Nerd Font
     style: Bold
 
   italic:
-    family: Input Mono
-    style: Italic
+    family: Hack Nerd Font
+    style: Bold
 
-  size: 11.0
+  size: 12.0
 
   offset:
     x: 0
