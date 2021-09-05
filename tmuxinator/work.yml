@@ -9,7 +9,7 @@ windows:
       root: ~/code/work/datahub-airflow/
       layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
       panes:
-        - vim -S
+        - venv && vim -S
         - git fetch --prune
         -
         -
@@ -17,7 +17,7 @@ windows:
       root: ~/code/work/pandata-dataseer/
       layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
       panes:
-        - vim -S
+        - venv && vim -S
         - git fetch --prune
         -
         -
@@ -46,7 +46,7 @@ windows:
       root: ~/code/work/pandata-pyspark/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - venv && vim -S
         - git fetch --prune
         -
   - pd-infra-tf:
