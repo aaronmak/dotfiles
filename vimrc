@@ -36,8 +36,6 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'psf/black'
 " Formatting with editor config
 Plug 'editorconfig/editorconfig-vim'
-" tmux
-Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 " =======================
@@ -246,9 +244,6 @@ let g:ale_fix_on_save = 1
 
 " diminactive
 let g:diminactive_enable_focus = 1
-
-" Run Black on save
-autocmd BufWritePre *.py execute ':Black'
 
 " Treesitter
 lua << EOF
