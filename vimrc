@@ -175,18 +175,12 @@ if &t_Co > 2 || has("gui_running")
   hi LineNr ctermbg=NONE guibg=NONE
 endif
 
-" Bind `q` to close the buffer for help files
-autocmd Filetype help nnoremap <buffer> q :q<CR>
-
 " Disable netrw
 let loaded_netrwPlugin = 1
 
 " =======================
 " Text
 " =======================
-
-" By default, vim thinks .md is Modula-2.
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Don't automatically continue comments after newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
