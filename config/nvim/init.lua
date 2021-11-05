@@ -118,6 +118,8 @@ map('n', '<S-Tab>', ':bprev!<CR>')
 
 -- Close current buffer
 map('n', '<leader>bq', ':bp <bar> bd! #<cr>')
+-- Close all open buffers
+map('n', '<leader>bqa', ':%bd!<cr>')
 
 -- <Tab> to navigate the completion menu
 map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
