@@ -56,7 +56,6 @@ opt.scrolloff = 4             -- Keep at least 4 lines below cursor
 opt.signcolumn = 'yes'          -- always show signcolumns
 opt.grepprg = 'rg' --vimgrep   -- Use RipGrep instead of grep
 opt.grepformat = '%f:%l:%c:%m'
-opt.completeopt = 'preview'    -- Disable preview  (not sure)
 
 opt.timeoutlen = 500
 
