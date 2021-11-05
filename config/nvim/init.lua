@@ -35,44 +35,44 @@ require'nvim-treesitter.configs'.setup {
 -- Settings
 -- =======================
 
-opt.encoding = 'utf8'           -- Set utf8 as standard encoding and en_US as the standard language
-opt.ffs = 'unix,dos,mac'        -- Use Unix as the standard file type
-opt.hidden = true                  -- Allow buffer change w/o saving
-opt.so = 7                    -- Set 7 lines to the cursor - when moving vertically using j/k
-opt.cmdheight = 3             -- Height of the command bar
-opt.updatetime = 300          -- Reduce update time from default of 4000
-opt.autoread = true                -- Auto read when a file is changed from elsewhere
-opt.ignorecase = true              -- Ignore case when searching
-opt.smartcase = true              -- When searching try to be smart about cases
-opt.incsearch = true              -- Makes search act like search in modern browsers
-opt.lazyredraw = true             -- Don't redraw while executing macros (good performance config)
-opt.magic = true                   -- For regular expressions turn magic on
-opt.showmatch = true               -- Show matching brackets when text indicator is over them
-opt.mat = 2                   -- How many tenths of a second to blink when matching brackets
-opt.foldcolumn = '1'            -- Add a bit extra margin to the left
-opt.relativenumber = true          -- Set relative line numbers
-opt.number = true                  -- Set line numbers
-opt.scrolloff = 4             -- Keep at least 4 lines below cursor
-opt.signcolumn = 'yes'          -- always show signcolumns
-opt.grepprg = 'rg' --vimgrep   -- Use RipGrep instead of grep
-opt.grepformat = '%f:%l:%c:%m'
+opt.encoding       = 'utf8'           -- Set utf8 as standard encoding and en_US as the standard language
+opt.ffs            = 'unix,dos,mac'   -- Use Unix as the standard file type
+opt.hidden         = true             -- Allow buffer change w/o saving
+opt.so             = 7                -- Set 7 lines to the cursor - when moving vertically using j/k
+opt.cmdheight      = 3                -- Height of the command bar
+opt.updatetime     = 300              -- Reduce update time from default of 4000
+opt.autoread       = true             -- Auto read when a file is changed from elsewhere
+opt.ignorecase     = true             -- Ignore case when searching
+opt.smartcase      = true             -- When searching try to be smart about cases
+opt.incsearch      = true             -- Makes search act like search in modern browsers
+opt.lazyredraw     = true             -- Don't redraw while executing macros (good performance config)
+opt.magic          = true             -- For regular expressions turn magic on
+opt.showmatch      = true             -- Show matching brackets when text indicator is over them
+opt.mat            = 2                -- How many tenths of a second to blink when matching brackets
+opt.foldcolumn     = '1'              -- Add a bit extra margin to the left
+opt.relativenumber = true             -- Set relative line numbers
+opt.number         = true             -- Set line numbers
+opt.scrolloff      = 4                -- Keep at least 4 lines below cursor
+opt.signcolumn     = 'yes'            -- always show signcolumns
+opt.grepprg        = 'rg' --vimgrep   -- Use RipGrep instead of grep
+opt.grepformat     = '%f:%l:%c:%m'
 
 opt.timeoutlen = 500
 
 opt.expandtab = true  -- Use spaces instead of tabs
-opt.smarttab = true   -- Be smart when using tabs
+opt.smarttab  = true   -- Be smart when using tabs
 
 -- 1 tab == 2 spaces
-opt.shiftwidth= 2
-opt.tabstop = 2
+opt.shiftwidth = 2
+opt.tabstop    = 2
 opt.shiftround = true  -- When at 3 spaces and I hit >>, go to 4, not 5.
 
 -- Linebreak on 500 characters
-opt.linebreak = true
-opt.textwidth = 500
-opt.autoindent = true
+opt.linebreak   = true
+opt.textwidth   = 500
+opt.autoindent  = true
 opt.smartindent = true
-opt.wrap = true -- Wrap lines
+opt.wrap        = true -- Wrap lines
 
 -- Spelling for Markdown and gitcommits
 vim.api.nvim_command([[
@@ -83,7 +83,7 @@ augroup END
 ]])
 
 cmd 'syntax enable'
-opt.hlsearch = true
+opt.hlsearch      = true
 opt.termguicolors = true
 
 -- Disable netrw
