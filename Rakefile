@@ -3,7 +3,7 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   $replace_all = false
-  files = Rake::FileList.new("*")
+  files = Rake::FileList.new("**/*")
 
   files.each do |file|
     next if %w[Rakefile README.md Session.vim LICENSE].include? file
