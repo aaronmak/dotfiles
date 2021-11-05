@@ -7,7 +7,12 @@ task :install do
 
   files.each do |file|
     next if %w[Rakefile README.md Session.vim LICENSE].include? file
-    next if Dir.exist? File.join(ENV['HOME'], ".#{file}")
+
+    if Dir.exist? file
+      create_dir(file)
+      next
+    end
+
     replace_confirm(file)
   end
 end
@@ -43,4 +48,8 @@ end
 def link_file(file)
   puts "linking ~/.#{file}"
   system %Q{ln -nsf "$PWD/#{file}" "$HOME/.#{file}"}
+end
+
+def create_dir(dir)
+  system %Q{mkdir -p "$HOME/.#{dir}"}
 end
