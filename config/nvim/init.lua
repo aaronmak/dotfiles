@@ -128,11 +128,11 @@ map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 
+-- Move to the split in the direction shown, or create a new split
 map('n', '<leader><C-h>', ':call WinMove("h")<cr>', {silent = true})
 map('n', '<leader><C-j>', ':call WinMove("j")<cr>', {silent = true})
 map('n', '<leader><C-k>', ':call WinMove("k")<cr>', {silent = true})
 map('n', '<leader><C-l>', ':call WinMove("l")<cr>', {silent = true})
-
 vim.api.nvim_command([[
   function! WinMove(key)
     let t:curwin = winnr()
