@@ -23,7 +23,12 @@ return require('packer').startup(function()
 
   -- Improve display
   use 'blueyed/vim-diminactive'
-  use 'airblade/vim-gitgutter'
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'lukas-reineke/indent-blankline.nvim'
 
