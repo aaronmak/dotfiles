@@ -20,6 +20,8 @@ g['deoplete#enable_at_startup'] = 1
 
 cmd 'colorscheme gruvbox-material'
 g.gruvbox_material_background = 'hard'
+g.gruvbox_material_enable_bold = 1
+g.gruvbox_material_enable_italic = 1
 
 require('lualine').setup {
   options = {
