@@ -38,7 +38,7 @@ return require('packer').startup(function()
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
-  use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'sainnhe/gruvbox-material'
 
   -- Python
   use 'deoplete-plugins/deoplete-jedi'

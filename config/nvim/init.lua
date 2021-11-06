@@ -18,8 +18,8 @@ require("bufferline").setup{}
 
 g['deoplete#enable_at_startup'] = 1
 
-g.nvcode_termcolors = 256
-cmd 'colorscheme gruvbox'
+cmd 'colorscheme gruvbox-material'
+g.gruvbox_material_background = 'hard'
 
 require('shade').setup {
   overlay_opacity = 60,
