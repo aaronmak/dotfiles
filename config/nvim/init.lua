@@ -21,6 +21,12 @@ g['deoplete#enable_at_startup'] = 1
 cmd 'colorscheme gruvbox-material'
 g.gruvbox_material_background = 'hard'
 
+require('lualine').setup {
+  options = {
+    theme = 'gruvbox-material'
+  }
+}
+
 require('shade').setup {
   overlay_opacity = 60,
 }
