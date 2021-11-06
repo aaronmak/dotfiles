@@ -50,4 +50,7 @@ return require('packer').startup(function()
 
   -- Formatting with editor config
   use 'editorconfig/editorconfig-vim'
+
+  -- Collaborative editing
+  use 'jbyuki/instant.nvim'
 end)

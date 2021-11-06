@@ -44,6 +44,8 @@ require'nvim-treesitter.configs'.setup {
 require('gitsigns').setup {
 }
 
+g.instant_username = 'aaronmak'
+
 -- =======================
 -- Settings
 -- =======================
