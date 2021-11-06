@@ -21,7 +21,9 @@ g['deoplete#enable_at_startup'] = 1
 g.nvcode_termcolors = 256
 cmd 'colorscheme gruvbox'
 
-g.diminactive_enable_focus = 1
+require('shade').setup {
+  overlay_opacity = 60,
+}
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
