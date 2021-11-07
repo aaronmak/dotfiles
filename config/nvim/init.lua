@@ -187,8 +187,6 @@ map('n', '<S-Tab>', ':bprev!<CR>')
 
 -- Close current buffer
 map('n', '<leader>bq', ':bp <bar> bd! #<cr>')
--- Close all open buffers
-map('n', '<leader>bqa', ':%bd!<cr>')
 
 -- Move up and down by visible lines if current line is wrapped
 map('n', 'j', 'gj')
