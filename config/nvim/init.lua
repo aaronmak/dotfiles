@@ -113,6 +113,9 @@ opt.wildignore = '*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store'
 -- Remove trailing whitespaces
 cmd 'autocmd BufWritePre * :%s/s+$//e'
 
+-- Do not continue comment on new line
+cmd 'autocmd BufNewFile,BufRead * setlocal formatoptions-=cro'
+
 -- =======================
 -- Mapping
 -- =======================
