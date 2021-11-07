@@ -63,6 +63,8 @@ cmp.setup {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     }),
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
@@ -187,10 +189,6 @@ map('n', '<S-Tab>', ':bprev!<CR>')
 map('n', '<leader>bq', ':bp <bar> bd! #<cr>')
 -- Close all open buffers
 map('n', '<leader>bqa', ':%bd!<cr>')
-
--- <Tab> to navigate the completion menu
-map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
-map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 -- Move up and down by visible lines if current line is wrapped
 map('n', 'j', 'gj')
