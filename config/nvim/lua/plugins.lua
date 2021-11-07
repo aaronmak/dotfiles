@@ -1,10 +1,8 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'      -- Let packer manage itself
-  use 'neovim/nvim-lspconfig'          -- lsp common config
-  use 'hrsh7th/nvim-cmp'               -- completion engine for neovim
-  use 'christoomey/vim-tmux-navigator'
+  use 'wbthomason/packer.nvim'          -- Let packer manage itself
+  use 'christoomey/vim-tmux-navigator'  -- Easier navigation between tmux and vim
 
   -- Convenience
   use {
@@ -35,18 +33,24 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'sainnhe/gruvbox-material'
+
+  -- Language server protocol
+  use 'neovim/nvim-lspconfig'
 
   -- Autocomplete
-  use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
-  use 'sainnhe/gruvbox-material'
-
-  -- Python
-  use 'deoplete-plugins/deoplete-jedi'
-  use 'psf/black'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
 
   -- Formatting with editor config
   use 'editorconfig/editorconfig-vim'

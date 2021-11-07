@@ -39,6 +39,9 @@ unset file;
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# pipx uses .local
+export PATH="$PATH:$HOME/.local/bin"
+
 
 # Autoload completions
 autoload -Uz compinit && compinit
