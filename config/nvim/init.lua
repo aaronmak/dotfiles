@@ -213,7 +213,7 @@ vim.api.nvim_command([[
 ]])
 
 map('n', '<leader>dcf', ':!rm %<cr>')  -- delete current file
-map('n', '<leader>co', ':!%y+<cr>')  -- copy all
+map('n', '<leader>co', ':%y+<cr>')  -- copy all
 
 
 vim.api.nvim_command([[
