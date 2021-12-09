@@ -152,7 +152,7 @@ opt.hlsearch      = true
 opt.termguicolors = true
 
 -- Disable netrw
-loaded_netrwPlugin = 1
+g.loaded_netrwPlugin = 1
 
 -- Paste (requires xsel installed)
 opt.clipboard = 'unnamedplus'
