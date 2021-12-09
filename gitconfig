@@ -72,6 +72,9 @@
     uncommit = reset --soft HEAD^
     unstage = reset
 
+    # Add Co-authored-by at end of commit
+    coauthor = "!f() { git commit --amend -m \"$(git log -1 --pretty=%B)\" -m \"Co-authored-by: $1\"; }; f"
+
     # Merge GitHub pull request on top of the `master` branch
     mpr = "!f() { \
         if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
