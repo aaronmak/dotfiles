@@ -121,6 +121,7 @@ opt.scrolloff      = 4                -- Keep at least 4 lines below cursor
 opt.signcolumn     = 'yes'            -- always show signcolumns
 opt.grepprg        = 'rg' --vimgrep   -- Use RipGrep instead of grep
 opt.grepformat     = '%f:%l:%c:%m'
+opt.swapfile       = false            -- Disable swap files since there's version control
 
 opt.timeoutlen = 500
 
