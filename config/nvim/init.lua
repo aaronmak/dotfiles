@@ -14,7 +14,20 @@ end
 -- =======================
 
 require('plugins')
-require("bufferline").setup{}
+require("bufferline").setup{
+  options = {
+    numbers = function(opts)
+      return string.format('%s.', opts.id)
+    end,
+    name_formatter = function(buf)  -- buf contains a "name", "path" and "bufnr"
+      return vim.fn.pathshorten(vim.fn.fnamemodify(buf.path, ":~:."))
+    end,
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    max_name_length = 30,
+    separator_style = "thick",
+  }
+}
 
 g['deoplete#enable_at_startup'] = 1
 
