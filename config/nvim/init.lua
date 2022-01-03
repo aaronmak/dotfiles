@@ -31,10 +31,11 @@ require("bufferline").setup{
 
 g['deoplete#enable_at_startup'] = 1
 
-cmd 'colorscheme gruvbox-material'
+opt.background = 'dark'
 g.gruvbox_material_background = 'hard'
 g.gruvbox_material_enable_bold = 1
 g.gruvbox_material_enable_italic = 1
+cmd 'colorscheme gruvbox-material'
 
 require('lualine').setup {
   options = {
