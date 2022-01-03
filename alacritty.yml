@@ -43,37 +43,59 @@ font:
 
 draw_bold_text_with_bright_colors: true
 
+# Dracula theme
 colors:
   primary:
-    background: '0x1e1e1e'
-    foreground: '0xe6d4a3'
-
+    background: '#282a36'
+    foreground: '#f8f8f2'
+    bright_foreground: '#ffffff'
   cursor:
-    text: '0x1e1e1e'
-    cursor: '0xe6d4a3'
-
-  # Gruvbox theme
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+    focused_match:
+      foreground: '#44475a'
+      background: '#ffb86c'
+    bar:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+  hints:
+    start:
+      foreground: '#282a36'
+      background: '#f1fa8c'
+    end:
+      foreground: '#f1fa8c'
+      background: '#282a36'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '#44475a'
   normal:
-    black:   '0x272727'
-    red:     '0xcc231c'
-    green:   '0x989719'
-    yellow:  '0xd79920'
-    blue:    '0x448488'
-    magenta: '0xb16185'
-    cyan:    '0x689d69'
-    white:   '0xa89983'
-
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
   bright:
-    black:   '0x928373'
-    red:     '0xfb4833'
-    green:   '0xb8ba25'
-    yellow:  '0xfabc2e'
-    blue:    '0x83a597'
-    magenta: '0xd3859a'
-    cyan:    '0x8ec07b'
-    white:   '0xebdbb2'
-
-  indexed_colors: []
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
 
 bell:
   animation: EaseOutExpo
