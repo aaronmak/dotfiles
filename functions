@@ -99,10 +99,11 @@ clone_repos() {
   git clone git@github.com:aaronmak/snippets.git
 
   cd ~/code/work/
-  git clone git@github.com:deliveryhero/pandata.git & \
-  git clone git@github.com:deliveryhero/pandata-env.git & \
-  git clone git@github.com:deliveryhero/pandata-infra.git & \
-  git clone git@github.com:deliveryhero/pandata-pyspark.git & \
   git clone git@github.com:deliveryhero/datahub-airflow.git & \
+  git clone git@github.com:deliveryhero/pandata-infra.git & \
+  git clone git@github.com:deliveryhero/pandata-ml-env.git & \
+  git clone git@github.com:deliveryhero/pandata-pyspark.git & \
+  git clone git@github.com:deliveryhero/pd-devops.git & \
+  git clone git@github.com:deliveryhero/pd-infra-terraform.git & \
   git clone git@github.com:apache/airflow.git
 }
