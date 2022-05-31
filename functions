@@ -90,6 +90,17 @@ mk_neovim_venv() {
   pip install neovim
 }
 
+boop() {
+  local last="$?"
+  if [[ "$last" == '0' ]]; then
+    say -v Fred "Yes, milord."
+  else
+    say -v Fred "By the gods, you're annoying!"
+  fi
+  $(exit "$last")
+}
+
+
 clone_repos() {
   mkdir -p ~/code/personal
   mkdir -p ~/code/work
