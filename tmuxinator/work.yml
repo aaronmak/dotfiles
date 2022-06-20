@@ -49,6 +49,13 @@ windows:
         - venv && vim -S
         - git fetch --prune
         -
+  - pandata-snippets:
+      root: ~/code/work/pandata-foundation-snippets/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
   - pd-infra-tf:
       root: ~/code/work/pd-infra-terraform/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
@@ -63,7 +70,7 @@ windows:
         - vim -S
         - git fetch --prune
         -
-  - pandata:
+  - pandata-ml:
       root: ~/code/work/pandata-ml-env/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
