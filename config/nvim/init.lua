@@ -48,7 +48,24 @@ require('shade').setup {
 }
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {
+    "bash",
+    "c",
+    "comment",
+    "cpp",
+    "css",
+    "dockerfile",
+    "go",
+    "json",
+    "lua",
+    "make",
+    "markdown",
+    "python",
+    "ruby",
+    "rust",
+    "scss",
+    "sql",
+  },
   highlight = {
     enable = true,  -- false will disable the whole extension
     disable = {},  -- list of language that will be disabled
