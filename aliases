@@ -46,10 +46,6 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
-# use gdate instead of date
-alias gdate=/bin/date
-alias date=gdate
-
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
