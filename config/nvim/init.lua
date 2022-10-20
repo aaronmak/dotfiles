@@ -113,7 +113,7 @@ cmp.setup.cmdline('/', {
 })
 
 -- Setup lspconfig
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig').pylsp.setup {
   capabilities = capabilities,
 }
@@ -212,7 +212,10 @@ map('n', '<S-Tab>', ':bprev!<CR>')
 map('n', '<leader>bq', ':bp <bar> bd! #<cr>')
 
 -- Close all buffers
-map('n', '<leader>bqa', ':bufdo bd <cr>')
+map('n', '<leader>bqa', ':%bdelete <cr>')
+
+-- Close all buffers except current
+map('n', '<leader>bqq', ':%bd|e# <cr>')
 
 -- Move up and down by visible lines if current line is wrapped
 map('n', 'j', 'gj')
