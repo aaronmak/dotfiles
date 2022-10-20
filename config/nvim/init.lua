@@ -43,10 +43,6 @@ require('lualine').setup {
   }
 }
 
-require('shade').setup {
-  overlay_opacity = 60,
-}
-
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "bash",

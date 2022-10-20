@@ -20,7 +20,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
 
   -- Improve display
-  use 'sunjon/shade.nvim'
+  use 'TaDaa/vimade'
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
