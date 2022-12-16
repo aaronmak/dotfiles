@@ -91,7 +91,7 @@
     }; f"
 
     cpr = "!f() { \
-        gh pr create --base $1 -f && \
+        gh pr create --base $1 --fill --draft && \
         gh pr view --web; \
     }; f"
 
