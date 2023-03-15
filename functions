@@ -116,6 +116,7 @@ clone_repos() {
   git clone git@github.com:deliveryhero/pandata-ml-env.git & \
   git clone git@github.com:deliveryhero/pandata-pyspark.git & \
   git clone git@github.com:deliveryhero/pd-devops.git & \
+  git clone git@github.com:deliveryhero/pandata-foundation-snippets.git & \
   git clone git@github.com:deliveryhero/pd-infra-terraform.git & \
   git clone git@github.com:apache/airflow.git
 }
