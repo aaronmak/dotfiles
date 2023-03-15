@@ -1,7 +1,7 @@
 [user]
     name = Aaron Mak
     email = im@arnmk.com
-    signingkey = C34A558918371145
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICBMB/A6v3VSVQ4NACQeRkTfDtPSi2KiaM6Z/8nFmn3F
 
 [alias]
 
@@ -154,7 +154,11 @@
 
 [gpg]
 
-    program = gpg
+    format = ssh
+
+[gpg "ssh"]
+
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [help]
 
