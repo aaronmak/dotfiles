@@ -112,11 +112,10 @@ clone_repos() {
   cd ~/code/work/
   git clone git@github.com:deliveryhero/datahub-airflow.git & \
   git clone git@github.com:deliveryhero/pd-pandata-aws-lambda.git & \
-  git clone git@github.com:deliveryhero/pandata-infra.git & \
-  git clone git@github.com:deliveryhero/pandata-ml-env.git & \
-  git clone git@github.com:deliveryhero/pandata-pyspark.git & \
+  git clone git@github.com:deliveryhero/pd-data-infra.git & \
+  git clone git@github.com:deliveryhero/pd-data-pyspark.git & \
   git clone git@github.com:deliveryhero/pd-devops.git & \
-  git clone git@github.com:deliveryhero/pandata-foundation-snippets.git & \
+  git clone git@github.com:deliveryhero/pd-data-ops-infra-snippets.git & \
   git clone git@github.com:deliveryhero/pd-infra-terraform.git & \
   git clone git@github.com:apache/airflow.git
 }
