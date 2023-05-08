@@ -109,3 +109,4 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(op completion zsh)"; compdef _op op
