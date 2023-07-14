@@ -13,16 +13,15 @@ windows:
         - git fetch --prune
         - venv
         - venv
-  - lambda:
-      root: ~/code/work/pd-pandata-aws-lambda/
-      layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
+  - infra:
+      root: ~/code/work/pd-data-infra/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
         - git fetch --prune
         -
-        -
-  - infra:
-      root: ~/code/work/pd-data-infra/
+  - dbtflow:
+      root: ~/code/work/dbtflow/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
@@ -34,6 +33,14 @@ windows:
       panes:
         - vim -S
         - git fetch --prune
+        -
+  - lambda:
+      root: ~/code/work/pd-pandata-aws-lambda/
+      layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
   - pyspark:
       root: ~/code/work/pd-data-pyspark/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
