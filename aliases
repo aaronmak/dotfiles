@@ -22,12 +22,12 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
-# Use exa instead of ls and tree
-alias l='exa --long --git'
-alias la='exa --long --all --git'
-alias lsd='exa --list-dirs'
-alias ls='exa'
-alias tree='exa --tree'
+# Use eza instead of ls and tree
+alias l='eza --long --git'
+alias la='eza --long --all --git'
+alias lsd='eza --list-dirs'
+alias ls='eza'
+alias tree='eza --tree'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
