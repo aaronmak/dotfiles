@@ -69,15 +69,15 @@ windows:
         - vim -S
         - git fetch --prune
         -
-  - pd-devops:
-      root: ~/code/work/pd-devops/
+  - pd-iac:
+      root: ~/code/work/pd-automation-iac/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
         - git fetch --prune
         -
-  - pd-iac:
-      root: ~/code/work/pd-automation-iac/
+  - pd-db-users:
+      root: ~/code/work/pd-infra-db-users
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
