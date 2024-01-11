@@ -61,6 +61,7 @@ require('nvim-treesitter.configs').setup {
     "rust",
     "scss",
     "sql",
+    "yaml",
   },
   highlight = {
     enable = true,  -- false will disable the whole extension
