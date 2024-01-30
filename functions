@@ -120,5 +120,6 @@ clone_repos() {
   git clone git@github.com:deliveryhero/pd-infra-db-users.git & \
   git clone git@github.com:deliveryhero/pd-infra-terraform.git & \
   git clone git@github.com:deliveryhero/pd-pandata-aws-lambda.git & \
+  git clone git@github.com:deliveryhero/pd-data-engineering-metrics.git & \
   git clone git@github.com:apache/airflow.git
 }
