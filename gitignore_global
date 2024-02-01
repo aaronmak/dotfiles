@@ -41,6 +41,10 @@ Thumbs.db
 *.pem
 
 
+# Zed #
+#######
+.zed
+
 # Visual Studio Code #
 ######################
 .vscode
