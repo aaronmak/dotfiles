@@ -214,3 +214,8 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[maintenance]
+
+    repo = ~/code/work/datahub-airflow
+    repo = ~/code/work/pd-data-infra
