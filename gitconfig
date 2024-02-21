@@ -154,6 +154,8 @@
 
     # Detect copies as well as renames
     renames = copies
+    algorithm = histogram
+    context = 10
 
 [gpg]
 
@@ -176,6 +178,8 @@
 
     # Include summaries of merged commits in newly created merge commit messages
     log = true
+
+    conflictstyle = zdiff3
 
 [push]
 
@@ -201,6 +205,7 @@
 [url "git@github.com:"]
 
     insteadOf = "gh:"
+    insteadOf = "https://github.com/"
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
 
