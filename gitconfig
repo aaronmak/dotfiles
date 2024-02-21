@@ -120,6 +120,9 @@
     precomposeunicode = false
     ignorecase = false
 
+    # makes git status faster by watching files in background
+    fsmonitor = true
+
 [color]
 
     ui = auto
