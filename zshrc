@@ -42,6 +42,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # pipx uses .local
 export PATH="$PATH:$HOME/.local/bin"
 
+# For yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Autoload completions
 autoload -Uz compinit && compinit
