@@ -69,14 +69,10 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 # Load asdf command
 export ASDF_DIR="${HOME}/.asdf"
 
-if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
-    . "$ASDF_DIR/asdf.sh"
-
-    # Load completions
-    if [[ -f "$ASDF_COMPLETIONS/asdf.bash" ]]; then
-        . "$ASDF_COMPLETIONS/asdf.bash"
-    fi
-fi
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 if type brew &>/dev/null; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
