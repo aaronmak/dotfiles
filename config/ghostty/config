@@ -1,1 +1,8 @@
 theme = GruvboxDark
+
+cursor-style = bar
+cursor-style-blink = false
+mouse-hide-while-typing = true
+unfocused-split-opacity = 0.3
+
+macos-titlebar-style = hidden
