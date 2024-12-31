@@ -59,4 +59,7 @@ return require('packer').startup(function()
 
   -- Collaborative editing
   use 'jbyuki/instant.nvim'
+
+  -- GraphQL
+  use 'jparise/vim-graphql'
 end)
