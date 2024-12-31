@@ -34,6 +34,7 @@ return require('packer').startup(function()
   }
   use 'lukas-reineke/indent-blankline.nvim'
   use 'sainnhe/gruvbox-material'
+  use 'sunjon/shade.nvim'
 
   -- Language server protocol
   use 'neovim/nvim-lspconfig'
