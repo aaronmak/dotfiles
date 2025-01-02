@@ -1,4 +1,4 @@
-theme = GruvboxDark
+theme = tokyonight
 
 cursor-style = bar
 cursor-style-blink = false
