@@ -124,6 +124,28 @@ cmp.setup.cmdline('/', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig').pylsp.setup {
   capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+          -- formatter options
+          black = { enabled = true },
+          autopep8 = { enabled = false },
+          yapf = { enabled = false },
+          -- linter options
+          pyflakes = { enabled = true },
+          pycodestyle = { enabled = true },
+          -- type checker
+          pylsp_mypy = { enabled = true },
+          -- auto-completion options
+          jedi_completion = { fuzzy = true },
+          -- import sorting
+          pyls_isort = { enabled = true },
+      },
+    },
+  },
+  flags = {
+      debounce_text_changes = 200,
+  },
 }
 
 -- =======================
