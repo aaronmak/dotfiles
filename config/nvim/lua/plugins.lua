@@ -66,4 +66,7 @@ return require('packer').startup(function()
 
   -- GraphQL
   use 'jparise/vim-graphql'
+
+  -- Easier to see the cursor
+  use 'sphamba/smear-cursor.nvim'
 end)
