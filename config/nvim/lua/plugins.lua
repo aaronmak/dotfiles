@@ -33,7 +33,6 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'lukas-reineke/indent-blankline.nvim'
-  -- use 'sainnhe/gruvbox-material'
   use 'folke/tokyonight.nvim'
   use 'sunjon/shade.nvim'
 
