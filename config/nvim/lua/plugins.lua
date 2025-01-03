@@ -10,7 +10,6 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'junegunn/vim-easy-align'
-  -- use 'justinmk/vim-sneak'
   use 'ggandor/leap.nvim'
   use 'tomtom/tcomment_vim'
   use 'tpope/vim-abolish'
