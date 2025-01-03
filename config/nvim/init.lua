@@ -339,6 +339,7 @@ require("noice").setup({
 
 require('smear_cursor').setup({
    cursor_color = '#d3cdc3',
+   smear_to_cmd = false,
 })
 
 require('leap').create_default_mappings()
