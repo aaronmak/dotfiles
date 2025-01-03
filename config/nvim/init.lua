@@ -343,6 +343,10 @@ require("noice").setup({
   },
 })
 
+require("notify").setup({
+  background_colour = "#000000",
+})
+
 require('smear_cursor').setup({
    cursor_color = '#d3cdc3',
    smear_to_cmd = false,
