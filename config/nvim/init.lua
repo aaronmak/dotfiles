@@ -32,6 +32,20 @@ require("bufferline").setup{
 g['deoplete#enable_at_startup'] = 1
 
 opt.background = 'dark'
+
+require("tokyonight").setup({
+  on_highlights = function(hl, c)
+    hl.LineNr = {
+      fg = "#ff4774"
+    }
+    hl.LineNrAbove = {
+      fg = "#a9b1d6"
+    }
+    hl.LineNrBelow = {
+      fg = "#a9b1d6"
+    }
+  end,
+})
 cmd 'colorscheme tokyonight'
 
 require('lualine').setup {
