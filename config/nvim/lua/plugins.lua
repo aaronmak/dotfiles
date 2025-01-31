@@ -35,13 +35,6 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/tokyonight.nvim'
   use 'sunjon/shade.nvim'
-  use {
-    'folke/noice.nvim',
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    }
-  }
 
   -- Language server protocol
   use 'neovim/nvim-lspconfig'
