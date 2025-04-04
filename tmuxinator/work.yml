@@ -27,8 +27,15 @@ windows:
         - vim -S
         - git fetch --prune
         -
-  - data-contacts:
-      root: ~/code/work/datahub-data-contracts/
+  - flink_cdc:
+      root: ~/code/work/pd-data-flink-cdc/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
+  - custom_images:
+      root: ~/code/work/pd-data-foundations-custom-images/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
@@ -49,7 +56,7 @@ windows:
         - git fetch --prune && cd glue
         - cd glue
   - snippets:
-      root: ~/code/work/pd-data-infra-eng-snippets/
+      root: ~/code/work/pd-data-foundations-snippets/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
@@ -85,6 +92,13 @@ windows:
         -
   - pd-db-users:
       root: ~/code/work/pd-infra-db-users
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - vim -S
+        - git fetch --prune
+        -
+  - data-contacts:
+      root: ~/code/work/datahub-data-contracts/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
         - vim -S
