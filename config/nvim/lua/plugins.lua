@@ -61,4 +61,45 @@ return require('packer').startup(function()
 
   -- Easier to see the cursor
   use 'sphamba/smear-cursor.nvim'
+  -- agentic ai
+  use({
+    "olimorris/codecompanion.nvim",
+    config = function()
+      require("codecompanion").setup({
+        strategies = {
+          chat = {
+            adapter = "pd_llm",
+          },
+          inline = {
+            adapter = "pd_llm",
+          },
+          cmd = {
+            adapter = "pd_llm",
+          }
+        },
+        adapters = {
+          opts = {
+            show_defaults = false,
+          },
+          pd_llm = function()
+            return require("codecompanion.adapters").extend("openai_compatible", {
+              env = {
+                url = "https://pd-llm-proxy.deliveryhero.net",
+                api_key = "cmd:op read op://Private/pd_llm_proxy/credential --no-newline",
+              },
+              schema = {
+                model = {
+                  default = "gemini-2-5-pro-exp",  -- define llm model to be used
+                },
+              },
+            })
+          end,
+        },
+      })
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    }
+  })
 end)
