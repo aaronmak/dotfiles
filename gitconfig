@@ -92,7 +92,7 @@
 
     cpr = "!f() { \
         gh pr create --base $1 --fill --draft && \
-        gh pr view --web; \
+        gh pr view $(git branch --show-current) --web; \
     }; f"
 
 [apply]
