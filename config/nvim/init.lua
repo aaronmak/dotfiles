@@ -326,4 +326,6 @@ require('smear_cursor').setup({
    smear_to_cmd = false,
 })
 
+require("config.lazy")
+
 require('leap').create_default_mappings()
