@@ -1,11 +1,19 @@
 return {
   -- Language server protocol
-  'neovim/nvim-lspconfig',
-
+  {
+      "mason-org/mason-lspconfig.nvim",
+      opts = {},
+      dependencies = {
+          { "mason-org/mason.nvim", opts = {} },
+          "neovim/nvim-lspconfig",
+      },
+  },
   -- Autocomplete
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    lazy = false,
+    branch = master,
     opts = {
       ensure_installed = {
         "bash",
