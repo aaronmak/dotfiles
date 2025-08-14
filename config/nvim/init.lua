@@ -13,140 +13,102 @@ end
 -- Plugins
 -- =======================
 
-require('plugins')
-require("bufferline").setup{
-  options = {
-    numbers = function(opts)
-      return string.format('%s.', opts.id)
-    end,
-    name_formatter = function(buf)  -- buf contains a "name", "path" and "bufnr"
-      return vim.fn.pathshorten(vim.fn.fnamemodify(buf.path, ":~:."))
-    end,
-    show_buffer_close_icons = false,
-    show_close_icon = false,
-    max_name_length = 30,
-    separator_style = "thick",
-  }
-}
+-- require('plugins')
 
-g['deoplete#enable_at_startup'] = 1
 
-opt.background = 'dark'
+-- require('nvim-treesitter.configs').setup {
+--   ensure_installed = {
+--     "bash",
+--     "c",
+--     "comment",
+--     "cpp",
+--     "css",
+--     "dockerfile",
+--     "go",
+--     "json",
+--     "lua",
+--     "make",
+--     "markdown",
+--     "python",
+--     "ruby",
+--     "rust",
+--     "scss",
+--     "sql",
+--     "yaml",
+--   },
+--   highlight = {
+--     enable = true,  -- false will disable the whole extension
+--     disable = {},  -- list of language that will be disabled
+--   },
+-- }
 
-require("tokyonight").setup({
-  on_highlights = function(hl, c)
-    hl.LineNr = {
-      fg = "#ff4774"
-    }
-    hl.LineNrAbove = {
-      fg = "#a9b1d6"
-    }
-    hl.LineNrBelow = {
-      fg = "#a9b1d6"
-    }
-  end,
-})
-cmd 'colorscheme tokyonight'
-
-require('lualine').setup {
-  options = {
-    theme = 'tokyonight'
-  }
-}
-
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "bash",
-    "c",
-    "comment",
-    "cpp",
-    "css",
-    "dockerfile",
-    "go",
-    "json",
-    "lua",
-    "make",
-    "markdown",
-    "python",
-    "ruby",
-    "rust",
-    "scss",
-    "sql",
-    "yaml",
-  },
-  highlight = {
-    enable = true,  -- false will disable the whole extension
-    disable = {},  -- list of language that will be disabled
-  },
-}
-
-require('gitsigns').setup {
-}
+-- require('gitsigns').setup {
+-- }
 
 g.instant_username = 'aaronmak'
 
 -- Autocomplete
-local cmp = require('cmp')
-cmp.setup {
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end
-  },
-  mapping = {
-    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ['<C-e>'] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
-    }),
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  },
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-  }, {
-    { name = 'buffer' },
-  })
-}
+-- local cmp = require('cmp')
+-- cmp.setup {
+--   snippet = {
+--     expand = function(args)
+--       vim.fn["vsnip#anonymous"](args.body)
+--     end
+--   },
+--   mapping = {
+--     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+--     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+--     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+--     ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+--     ['<C-e>'] = cmp.mapping({
+--       i = cmp.mapping.abort(),
+--       c = cmp.mapping.close(),
+--     }),
+--     ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+--     ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
+--     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+--   },
+--   sources = cmp.config.sources({
+--     { name = 'nvim_lsp' },
+--     { name = 'vsnip' },
+--   }, {
+--     { name = 'buffer' },
+--   })
+-- }
 
-cmp.setup.cmdline('/', {
-  sources = {
-    { name = 'buffer' }
-  }
-})
+-- cmp.setup.cmdline('/', {
+--   sources = {
+--     { name = 'buffer' }
+--   }
+-- })
 
 -- Setup lspconfig
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-require('lspconfig').pylsp.setup {
-  capabilities = capabilities,
-  settings = {
-    pylsp = {
-      plugins = {
-          -- formatter options
-          black = { enabled = true },
-          autopep8 = { enabled = false },
-          yapf = { enabled = false },
-          -- linter options
-          pyflakes = { enabled = true },
-          pycodestyle = { enabled = true },
-          -- type checker
-          pylsp_mypy = { enabled = true },
-          -- auto-completion options
-          jedi_completion = { fuzzy = true },
-          -- import sorting
-          pyls_isort = { enabled = true },
-      },
-    },
-  },
-  flags = {
-      debounce_text_changes = 200,
-  },
-}
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- require('lspconfig').pylsp.setup {
+--   capabilities = capabilities,
+--   settings = {
+--     pylsp = {
+--       plugins = {
+--           -- formatter options
+--           black = { enabled = true },
+--           autopep8 = { enabled = false },
+--           yapf = { enabled = false },
+--           -- linter options
+--           pyflakes = { enabled = true },
+--           pycodestyle = { enabled = true },
+--           -- type checker
+--           pylsp_mypy = { enabled = true },
+--           -- auto-completion options
+--           jedi_completion = { fuzzy = true },
+--           -- import sorting
+--           pyls_isort = { enabled = true },
+--       },
+--     },
+--   },
+--   flags = {
+--       debounce_text_changes = 200,
+--   },
+-- }
 
 -- =======================
 -- Settings
@@ -289,43 +251,42 @@ endfunction
 
 map('', '<Leader>rf', ':call RenameFile()<cr>')
 
-local telescope = require("telescope")
-local telescopeConfig = require("telescope.config")
+-- local telescope = require("telescope")
+-- local telescopeConfig = require("telescope.config")
 
 -- Clone the default Telescope configuration
-local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+-- local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
 
 -- search in hidden/dot files.
-table.insert(vimgrep_arguments, "--hidden")
+-- table.insert(vimgrep_arguments, "--hidden")
 -- don't search in the `.git` directory
-table.insert(vimgrep_arguments, "--glob")
-table.insert(vimgrep_arguments, "!**/.git/*")
+-- table.insert(vimgrep_arguments, "--glob")
+-- table.insert(vimgrep_arguments, "!**/.git/*")
 
-telescope.setup({
-	defaults = {
-		-- `hidden = true` is not supported in text grep commands.
-		vimgrep_arguments = vimgrep_arguments,
-	},
-	pickers = {
-		find_files = {
-			-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
-			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-		},
-		live_grep = {
-			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-		},
-	},
-})
-map('n', '<leader>ff', ':Telescope find_files<cr>')
-map('n', '<leader>fg', ':Telescope live_grep<cr>')
-map('n', '<leader>fb', ':Telescope buffers<cr>')
-map('n', '<leader>fh', ':Telescope help_tags<cr>')
-
-require('smear_cursor').setup({
-   cursor_color = '#d3cdc3',
-   smear_to_cmd = false,
-})
+-- telescope.setup({
+-- 	defaults = {
+-- 		-- `hidden = true` is not supported in text grep commands.
+-- 		vimgrep_arguments = vimgrep_arguments,
+-- 	},
+-- 	pickers = {
+-- 		find_files = {
+-- 			-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+-- 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+-- 		},
+-- 		live_grep = {
+-- 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+-- 		},
+-- 	},
+-- })
+-- map('n', '<leader>ff', ':Telescope find_files<cr>')
+-- map('n', '<leader>fg', ':Telescope live_grep<cr>')
+-- map('n', '<leader>fb', ':Telescope buffers<cr>')
+-- map('n', '<leader>fh', ':Telescope help_tags<cr>')
+--
+-- require('smear_cursor').setup({
+--    cursor_color = '#d3cdc3',
+--    smear_to_cmd = false,
+-- })
 
 require("config.lazy")
-
-require('leap').create_default_mappings()
+cmd 'colorscheme tokyonight'

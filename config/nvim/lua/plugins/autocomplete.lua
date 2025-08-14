@@ -4,8 +4,33 @@ return {
 
   -- Autocomplete
   {
-     'nvim-treesitter/nvim-treesitter',
-     build = ':TSUpdate',
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    opts = {
+      ensure_installed = {
+        "bash",
+        "c",
+        "comment",
+        "cpp",
+        "css",
+        "dockerfile",
+        "go",
+        "json",
+        "lua",
+        "make",
+        "markdown",
+        "python",
+        "ruby",
+        "rust",
+        "scss",
+        "sql",
+        "yaml",
+      },
+      highlight = {
+        enable = true,  -- false will disable the whole extension
+        disable = {},  -- list of language that will be disabled
+      },
+    },
   },
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-nvim-lsp',
