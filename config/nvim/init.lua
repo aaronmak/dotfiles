@@ -151,6 +151,5 @@ endfunction
 ]])
 
 map('', '<Leader>rf', ':call RenameFile()<cr>')
-
 require("config.lazy")
 cmd 'colorscheme tokyonight'
