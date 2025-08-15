@@ -40,7 +40,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			on_highlights = function(hl, c)
+			on_highlights = function(hl)
 				hl.LineNr = {
 					fg = "#ff4774",
 				}
