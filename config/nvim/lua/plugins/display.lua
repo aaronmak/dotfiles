@@ -53,4 +53,21 @@ return {
 			end,
 		},
 	},
+	{
+		"folke/snacks.nvim",
+		opts = {
+			scroll = {
+				animate = {
+					duration = { step = 15, total = 150 },
+					easing = "quad",
+				},
+				-- faster animation when repeating scroll after delay
+				animate_repeat = {
+					delay = 30,
+					duration = { step = 5, total = 30 },
+					easing = "quad",
+				},
+			},
+		},
+	},
 }
