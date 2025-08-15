@@ -59,13 +59,13 @@ return {
 			scroll = {
 				animate = {
 					duration = { step = 15, total = 150 },
-					easing = "quad",
+					easing = "linear",
 				},
 				-- faster animation when repeating scroll after delay
 				animate_repeat = {
-					delay = 30,
-					duration = { step = 5, total = 30 },
-					easing = "quad",
+					delay = 20,
+					duration = { step = 5, total = 50 },
+					easing = "linear",
 				},
 			},
 			indent = {
