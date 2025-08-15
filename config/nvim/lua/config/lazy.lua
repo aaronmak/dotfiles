@@ -1,76 +1,76 @@
-local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
-local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
-local g = vim.g      -- a table to access global variables
-local opt = vim.opt  -- to set options
+local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
+local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
+local g = vim.g -- a table to access global variables
+local opt = vim.opt -- to set options
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-
 local function map(mode, lhs, rhs, opts)
-  local options = {noremap = true}
-  if opts then options = vim.tbl_extend('force', options, opts) end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- =======================
 -- Settings
 -- =======================
 
-opt.encoding       = 'utf8'           -- Set utf8 as standard encoding and en_US as the standard language
-opt.ffs            = 'unix,dos,mac'   -- Use Unix as the standard file type
-opt.hidden         = true             -- Allow buffer change w/o saving
-opt.so             = 7                -- Set 7 lines to the cursor - when moving vertically using j/k
-opt.cmdheight      = 3                -- Height of the command bar
-opt.updatetime     = 300              -- Reduce update time from default of 4000
-opt.autoread       = true             -- Auto read when a file is changed from elsewhere
-opt.ignorecase     = true             -- Ignore case when searching
-opt.smartcase      = true             -- When searching try to be smart about cases
-opt.incsearch      = true             -- Makes search act like search in modern browsers
-opt.lazyredraw     = true             -- Don't redraw while executing macros (good performance config)
-opt.magic          = true             -- For regular expressions turn magic on
-opt.showmatch      = true             -- Show matching brackets when text indicator is over them
-opt.mat            = 2                -- How many tenths of a second to blink when matching brackets
-opt.foldcolumn     = '1'              -- Add a bit extra margin to the left
-opt.relativenumber = true             -- Set relative line numbers
-opt.number         = true             -- Set line numbers
-opt.scrolloff      = 4                -- Keep at least 4 lines below cursor
-opt.signcolumn     = 'yes'            -- always show signcolumns
-opt.grepprg        = 'rg' --vimgrep   -- Use RipGrep instead of grep
-opt.grepformat     = '%f:%l:%c:%m'
-opt.swapfile       = false            -- Disable swap files since there's version control
+opt.encoding = "utf8" -- Set utf8 as standard encoding and en_US as the standard language
+opt.ffs = "unix,dos,mac" -- Use Unix as the standard file type
+opt.hidden = true -- Allow buffer change w/o saving
+opt.so = 7 -- Set 7 lines to the cursor - when moving vertically using j/k
+opt.cmdheight = 3 -- Height of the command bar
+opt.updatetime = 300 -- Reduce update time from default of 4000
+opt.autoread = true -- Auto read when a file is changed from elsewhere
+opt.ignorecase = true -- Ignore case when searching
+opt.smartcase = true -- When searching try to be smart about cases
+opt.incsearch = true -- Makes search act like search in modern browsers
+opt.lazyredraw = true -- Don't redraw while executing macros (good performance config)
+opt.magic = true -- For regular expressions turn magic on
+opt.showmatch = true -- Show matching brackets when text indicator is over them
+opt.mat = 2 -- How many tenths of a second to blink when matching brackets
+opt.foldcolumn = "1" -- Add a bit extra margin to the left
+opt.relativenumber = true -- Set relative line numbers
+opt.number = true -- Set line numbers
+opt.scrolloff = 4 -- Keep at least 4 lines below cursor
+opt.signcolumn = "yes" -- always show signcolumns
+opt.grepprg = "rg" --vimgrep   -- Use RipGrep instead of grep
+opt.grepformat = "%f:%l:%c:%m"
+opt.swapfile = false -- Disable swap files since there's version control
 
 opt.timeoutlen = 500
 
-opt.expandtab = true  -- Use spaces instead of tabs
-opt.smarttab  = true   -- Be smart when using tabs
+opt.expandtab = true -- Use spaces instead of tabs
+opt.smarttab = true -- Be smart when using tabs
 
 -- 1 tab == 2 spaces
 opt.shiftwidth = 2
-opt.tabstop    = 2
-opt.shiftround = true  -- When at 3 spaces and I hit >>, go to 4, not 5.
+opt.tabstop = 2
+opt.shiftround = true -- When at 3 spaces and I hit >>, go to 4, not 5.
 
 -- Linebreak on 500 characters
-opt.linebreak   = true
-opt.textwidth   = 500
-opt.autoindent  = true
+opt.linebreak = true
+opt.textwidth = 500
+opt.autoindent = true
 opt.smartindent = true
-opt.wrap        = true -- Wrap lines
+opt.wrap = true -- Wrap lines
 
 -- Spelling for Markdown and gitcommits
 vim.api.nvim_command([[
@@ -80,26 +80,26 @@ augroup markdownSpell
 augroup END
 ]])
 
-cmd 'syntax enable'
-opt.hlsearch      = true
+cmd("syntax enable")
+opt.hlsearch = true
 opt.termguicolors = true
 
 -- Disable netrw
 g.loaded_netrwPlugin = 1
 
 -- Paste (requires xsel installed)
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- Ignore compiled files
-opt.wildignore = '*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store'
+opt.wildignore = "*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store"
 
-opt.completeopt = 'menu,menuone,noselect'
+opt.completeopt = "menu,menuone,noselect"
 
 -- Remove trailing whitespaces
-cmd 'autocmd BufWritePre * :%s/s+$//e'
+cmd("autocmd BufWritePre * :%s/s+$//e")
 
 -- Do not continue comment on new line
-cmd 'autocmd BufNewFile,BufRead * setlocal formatoptions-=cro'
+cmd("autocmd BufNewFile,BufRead * setlocal formatoptions-=cro")
 
 -- =======================
 -- Mapping
@@ -107,35 +107,35 @@ cmd 'autocmd BufNewFile,BufRead * setlocal formatoptions-=cro'
 g.python3_host_prog = "$HOME/.virtualenvs/neovim/bin/python"
 g.mapleader = " "
 
-map('', '<C-n><C-h>', ':nohlsearch<CR>')  -- Fast switch off highlights
+map("", "<C-n><C-h>", ":nohlsearch<CR>") -- Fast switch off highlights
 
-map('', '<C-s>', '<ESC>:w<CR>') -- Fast saving
-map('i', '<C-s>', '<ESC>:w<CR>')
-map('n', '<C-s>', ':w<CR>')
-map('v', '<C-c>', '+y')  -- Copy to system clipboard
+map("", "<C-s>", "<ESC>:w<CR>") -- Fast saving
+map("i", "<C-s>", "<ESC>:w<CR>")
+map("n", "<C-s>", ":w<CR>")
+map("v", "<C-c>", "+y") -- Copy to system clipboard
 
 -- Switch buffers with tab
-map('n', '<Tab>', ':bnext!<CR>')
-map('n', '<S-Tab>', ':bprev!<CR>')
+map("n", "<Tab>", ":bnext!<CR>")
+map("n", "<S-Tab>", ":bprev!<CR>")
 
 -- Close current buffer
-map('n', '<leader>bq', ':bp <bar> bd! #<cr>')
+map("n", "<leader>bq", ":bp <bar> bd! #<cr>")
 
 -- Close all buffers
-map('n', '<leader>bqa', ':%bdelete <cr>')
+map("n", "<leader>bqa", ":%bdelete <cr>")
 
 -- Close all buffers except current
-map('n', '<leader>bqq', ':%bd|e# <cr>')
+map("n", "<leader>bqq", ":%bd|e# <cr>")
 
 -- Move up and down by visible lines if current line is wrapped
-map('n', 'j', 'gj')
-map('n', 'k', 'gk')
+map("n", "j", "gj")
+map("n", "k", "gk")
 
 -- Move to the split in the direction shown, or create a new split
-map('n', '<leader><C-h>', ':call WinMove("h")<cr>', {silent = true})
-map('n', '<leader><C-j>', ':call WinMove("j")<cr>', {silent = true})
-map('n', '<leader><C-k>', ':call WinMove("k")<cr>', {silent = true})
-map('n', '<leader><C-l>', ':call WinMove("l")<cr>', {silent = true})
+map("n", "<leader><C-h>", ':call WinMove("h")<cr>', { silent = true })
+map("n", "<leader><C-j>", ':call WinMove("j")<cr>', { silent = true })
+map("n", "<leader><C-k>", ':call WinMove("k")<cr>', { silent = true })
+map("n", "<leader><C-l>", ':call WinMove("l")<cr>', { silent = true })
 vim.api.nvim_command([[
   function! WinMove(key)
     let t:curwin = winnr()
@@ -151,8 +151,8 @@ vim.api.nvim_command([[
   endfunction
 ]])
 
-map('n', '<leader>dcf', ':!rm %<cr>')  -- delete current file
-map('n', '<leader>co', ':%y+<cr>')  -- copy all
+map("n", "<leader>dcf", ":!rm %<cr>") -- delete current file
+map("n", "<leader>co", ":%y+<cr>") -- copy all
 
 vim.api.nvim_command([[
 function! RenameFile()
@@ -166,14 +166,21 @@ function! RenameFile()
 endfunction
 ]])
 
-map('', '<Leader>rf', ':call RenameFile()<cr>')
+map("", "<Leader>rf", ":call RenameFile()<cr>")
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
-  install = { colorscheme = { "tokyonight" } },
-  checker = { enabled = true },
+	spec = {
+		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
+		{ import = "plugins" },
+	},
+	defaults = {
+		lazy = false,
+		version = false,
+	},
+	install = { colorscheme = { "tokyonight" } },
+	checker = {
+		enabled = true,
+		notify = false, -- notify on update
+	},
 })
