@@ -9,7 +9,7 @@ windows:
       root: ~/code/work/datahub-airflow/
       layout: fd21,274x78,0,0{180x78,0,0,24,93x78,181,0[93x25,181,0,31,93x25,181,26,32,93x26,181,52,33]}
       panes:
-        - venv && vim -S
+        - venv && nvim
         - git fetch --prune
         - venv
         - venv
@@ -17,91 +17,91 @@ windows:
       root: ~/code/work/pd-data-infra/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - dbtflow:
       root: ~/code/work/dbtflow/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - flink_cdc:
       root: ~/code/work/pd-data-flink-cdc/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - custom_images:
       root: ~/code/work/pd-data-foundations-custom-images/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - airflow:
       root: ~/code/work/airflow/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - pyspark:
       root: ~/code/work/pd-data-pyspark/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - venv && vim -S
+        - venv && nvim
         - git fetch --prune && cd glue
         - cd glue
   - snippets:
       root: ~/code/work/pd-data-foundations-snippets/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - metrics:
       root: ~/code/work/pd-data-engineering-metrics/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - pd-infra:
       root: ~/code/work/pd-infra-terraform/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - pd-box:
       root: ~/code/work/pd-box/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - pd-iac:
       root: ~/code/work/pd-automation-iac/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - pd-db-users:
       root: ~/code/work/pd-infra-db-users
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - data-contacts:
       root: ~/code/work/datahub-data-contracts/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
       panes:
-        - vim -S
+        - nvim
         - git fetch --prune
         -
   - misc:
