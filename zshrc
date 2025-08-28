@@ -1,6 +1,5 @@
-# Add `~/bin` to the `$PATH`
-export PATH="/usr/local/bin:$PATH";
-export PATH="/usr/local/sbin:$PATH"
+# PATH configuration
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
 # history options
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
@@ -23,11 +22,17 @@ export PATH="/snap/bin:$PATH";
 # Add krew for kubectl plugins (https://krew.sigs.k8s.io/)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# Homebrew shell completions
+# Homebrew configuration
 if type brew &>/dev/null; then
   # Add gnu coreutils to path. Utils are prefixed with `g`
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  # Homebrew shell completions and plugins
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  if [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
+    . $(brew --prefix)/etc/profile.d/z.sh
+  fi
 fi
 
 # Load the shell dotfiles, and then some:
@@ -72,15 +77,6 @@ export ASDF_DIR="${HOME}/.asdf"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
-
-if type brew &>/dev/null; then
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  if [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
-    . $(brew --prefix)/etc/profile.d/z.sh
-  fi
-fi
 
 # setup ssh-agent
 SSH_ENV=$HOME/.ssh/environment
