@@ -1,16 +1,36 @@
 {
-  "theme": "GitHub",
-  "autoAccept": true,
-  "vimMode": true,
-  "checkpointing": {
-    "enabled": true
+  "general": {
+    "vimMode": true,
+    "preferredEditor": "nvim"
   },
-  "fileFiltering": {
-    "respectGitIgnore": true
+  "ui": {
+    "theme": "GitHub",
+    "hideBanner": true,
+    "hideTips": false
   },
-  "usageStatisticsEnabled": true,
-  "chatCompression": {
-    "contextPercentageThreshold": 0.6
+  "privacy": {
+    "usageStatisticsEnabled": false
   },
-  "selectedAuthType": "oauth-personal"
+  "model": {
+    "name": "gemini-2.5-flash",
+    "maxSessionTurns": 10,
+    "summarizeToolOutput": {
+      "run_shell_command": {
+        "tokenBudget": 100
+      }
+    }
+  },
+  "context": {
+    "loadFromIncludeDirectories": true,
+    "fileFiltering": {
+      "respectGitIgnore": true
+    }
+  },
+  "advanced": {
+    "excludedEnvVars": [
+      "DEBUG",
+      "DEBUG_MODE",
+      "NODE_ENV"
+    ]
+  }
 }
