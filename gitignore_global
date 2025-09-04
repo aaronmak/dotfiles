@@ -123,3 +123,7 @@ src/*.egg-info
 # Haskell #
 ###########
 .stack-work/
+
+# Claude #
+##########
+.claude/settings.local.json
