@@ -1,0 +1,36 @@
+{
+  "general": {
+    "vimMode": true,
+    "preferredEditor": "nvim"
+  },
+  "ui": {
+    "theme": "GitHub",
+    "hideBanner": true,
+    "hideTips": false
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "model": {
+    "name": "gemini-2.5-flash",
+    "maxSessionTurns": 10,
+    "summarizeToolOutput": {
+      "run_shell_command": {
+        "tokenBudget": 100
+      }
+    }
+  },
+  "context": {
+    "loadFromIncludeDirectories": true,
+    "fileFiltering": {
+      "respectGitIgnore": true
+    }
+  },
+  "advanced": {
+    "excludedEnvVars": [
+      "DEBUG",
+      "DEBUG_MODE",
+      "NODE_ENV"
+    ]
+  }
+}
