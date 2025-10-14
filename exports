@@ -33,3 +33,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # For linux paths
 export PATH="/home/aaronmak/.local/bin:$PATH"
+
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
