@@ -19,6 +19,13 @@ windows:
         - nvim
         - git fetch --prune
         -
+  - agentic:
+      root: ~/code/work/pd-agentic-apps/
+      layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
+      panes:
+        - nvim
+        - git fetch --prune
+        -
   - flink_cdc:
       root: ~/code/work/pd-data-flink-cdc/
       layout: 32b1,274x78,0,0{185x78,0,0,23,88x78,186,0[88x38,186,0,29,88x39,186,39,30]}
