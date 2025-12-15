@@ -54,6 +54,9 @@ vim.api.nvim_command([[
 
 map("n", "<leader>dcf", ":!rm %<cr>") -- delete current file
 map("n", "<leader>co", ":%y+<cr>") -- copy all
+vim.keymap.set("n", "<leader>fy", function()
+	vim.fn.setreg("+", vim.fn.expand("%"))
+end, { desc = "Copy relative path" })
 
 vim.api.nvim_command([[
 function! RenameFile()
