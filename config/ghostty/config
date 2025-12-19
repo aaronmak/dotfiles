@@ -7,3 +7,4 @@ unfocused-split-opacity = 0.3
 
 macos-titlebar-style = hidden
 auto-update = download
+confirm-close-surface = false
