@@ -101,6 +101,10 @@ else
     start_agent;
 fi
 
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise completion zsh)"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
