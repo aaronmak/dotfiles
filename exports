@@ -36,3 +36,6 @@ export PATH="/home/aaronmak/.local/bin:$PATH"
 
 export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
+
+# Claude Code
+export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
