@@ -138,3 +138,6 @@ alias dc='docker-compose'
 alias dcup='docker-compose up'
 alias dcupd='docker-compose up -d'
 alias dcdn='docker-compose down'
+
+# Claude Code
+alias cl="claude"
