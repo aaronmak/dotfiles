@@ -71,13 +71,6 @@ export PATH="$HOME/.poetry/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
-# Load asdf command
-export ASDF_DIR="${HOME}/.asdf"
-. "$HOME/.asdf/asdf.sh"
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-
 # setup ssh-agent
 SSH_ENV=$HOME/.ssh/environment
 
