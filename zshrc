@@ -41,15 +41,6 @@ for file in ~/.{bash_prompt,exports,aliases,functions,extras}; do
 done;
 unset file;
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# pipx uses .local
-export PATH="$PATH:$HOME/.local/bin"
-
-# For yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 # Autoload completions
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
@@ -57,15 +48,9 @@ autoload -U +X bashcompinit && bashcompinit
 # Completions for terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# Add nix
-if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
-
 # gcloud integration
 if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/path.zsh.inc"; fi
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
-
-# python poetry
-export PATH="$HOME/.poetry/bin:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
