@@ -61,7 +61,7 @@ venv() {
   VENV_NAME=$(basename $PWD | tr . -)
   VIRTUALENVS_DIR=${HOME}/.virtualenvs
   VIRTUALENV_PATH=${VIRTUALENVS_DIR}/${VENV_NAME}
-  PYTHON_BIN=${ASDF_DIR}/installs/python/${PYTHON_VERSION}/bin/python
+  PYTHON_BIN=${HOME}/.local/share/mise/installs/python/${PYTHON_VERSION}/bin/python
   if [ ! -z "$PYTHON_VERSION" ]; then
     if [ ! -f ${PYTHON_BIN} ]; then
       echo "Python version $PYTHON_VERSION is not installed."
