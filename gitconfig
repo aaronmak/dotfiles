@@ -122,6 +122,7 @@
 
     # makes git status faster by watching files in background
     fsmonitor = true
+	editor = nvim
 
 [color]
 
