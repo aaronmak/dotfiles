@@ -1,7 +1,12 @@
 {
   "general": {
     "vimMode": true,
-    "preferredEditor": "nvim"
+    "preferredEditor": "nvim",
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
   },
   "ui": {
     "theme": "GitHub",
@@ -32,5 +37,10 @@
       "DEBUG_MODE",
       "NODE_ENV"
     ]
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
   }
 }
