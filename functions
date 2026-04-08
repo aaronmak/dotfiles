@@ -127,3 +127,9 @@ clone_repos() {
   git clone git@github.com:deliveryhero/pd-ml-apps.git & \
   git clone git@github.com:apache/airflow.git
 }
+
+# DH
+gdp-access() {
+  # $1 == <vertical>, $2 == <environment>, $3 == <stamp>
+  eval "$(dp-devinfra destinations access --export-env-vars "$1" "$2" "$3")"
+}
