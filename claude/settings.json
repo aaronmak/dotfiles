@@ -19,6 +19,8 @@
       "Bash(grep:*)",
       "Bash(jq:*)",
       "Bash(ls:*)",
+      "Bash(sed:*)",
+      "Bash(wc:*)",
       "Bash(npm run:*)",
       "Bash(npm test:*)",
       "Bash(npx eslint:*)",
