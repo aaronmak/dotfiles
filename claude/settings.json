@@ -26,7 +26,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash /Users/a.mak/.claude/statusline-tmux.sh"
+    "command": "bash ~/.claude/statusline-tmux.sh"
   },
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
