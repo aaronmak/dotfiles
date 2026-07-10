@@ -9,6 +9,7 @@ cost_fmt=$(printf '%.2f' "$cost")
 five_h_used=$(jq -r '.rate_limits.five_hour.used_percentage // empty' <<< "$input")
 five_h_reset=$(jq -r '.rate_limits.five_hour.resets_at // empty' <<< "$input")
 seven_d_used=$(jq -r '.rate_limits.seven_day.used_percentage // empty' <<< "$input")
+context_remaining=$(jq -r '.context_window.remaining_percentage // empty' <<< "$input")
 
 remaining() {
   local used="$1"
@@ -26,5 +27,11 @@ reset_in() {
 
 five_h_reset_str=$(reset_in "$five_h_reset")
 
-printf "%s | \$%s session | 5h: %s (%s) | 7d: %s\n" \
-  "$model" "$cost_fmt" "$(remaining "$five_h_used")" "${five_h_reset_str:-n/a}" "$(remaining "$seven_d_used")"
+if [[ -z "$context_remaining" ]]; then
+  context_fmt="n/a"
+else
+  context_fmt=$(awk -v c="$context_remaining" 'BEGIN{printf "%.0f%% left", c}')
+fi
+
+printf "%s | \$%s session | ctx: %s | 5h: %s (%s) | 7d: %s\n" \
+  "$model" "$cost_fmt" "$context_fmt" "$(remaining "$five_h_used")" "${five_h_reset_str:-n/a}" "$(remaining "$seven_d_used")"
