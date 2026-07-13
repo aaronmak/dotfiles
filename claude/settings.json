@@ -1,6 +1,8 @@
 {
   "permissions": {
     "allow": [
+      "Bash(bq ls:*)",
+      "Bash(bq show:*)",
       "Bash(cat:*)",
       "Bash(fd:*)",
       "Bash(find:*)",
