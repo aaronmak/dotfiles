@@ -33,8 +33,6 @@
       "Edit(./src/**)",
       "Edit(./tests/**)",
       "Read(./**)",
-      "Write(./src/**)",
-      "Write(./tests/**)",
       "mcp__github__*",
       "mcp__linear__*"
     ],
@@ -50,9 +48,7 @@
       "Read(./**/*.pem)",
       "Read(./**/*credentials*)",
       "Edit(./.env)",
-      "Edit(./.env.*)",
-      "Write(./.env)",
-      "Write(./.env.*)"
+      "Edit(./.env.*)"
     ]
   },
   "hooks": {
