@@ -228,3 +228,7 @@
 
     repo = ~/code/work/datahub-airflow
     repo = ~/code/work/pd-data-infra
+
+[trace2]
+	eventTarget = af_unix:stream:~/.git-ai/internal/daemon/trace2.sock
+	eventNesting = 0

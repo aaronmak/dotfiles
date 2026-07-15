@@ -22,6 +22,9 @@ export PATH="/snap/bin:$PATH";
 # Add krew for kubectl plugins (https://krew.sigs.k8s.io/)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# Added by git-ai installer on Sat Jul 11 15:06:47 +08 2026
+export PATH="~/.git-ai/bin:$PATH"
+
 # Homebrew configuration
 if type brew &>/dev/null; then
   # Add gnu coreutils to path. Utils are prefixed with `g`
@@ -66,3 +69,4 @@ eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(op completion zsh)"; compdef _op op
 eval "$(uv generate-shell-completion zsh)"
+
