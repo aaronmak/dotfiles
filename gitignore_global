@@ -133,3 +133,5 @@ src/*.egg-info
 # Serena MCP #
 ##############
 .serena
+
+.scratch
