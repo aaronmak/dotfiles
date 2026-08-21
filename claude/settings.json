@@ -82,7 +82,16 @@
   },
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "heroflow@Heroflow": true
+  },
+  "extraKnownMarketplaces": {
+    "Heroflow": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/deliveryhero/pd-heroflow.git"
+      }
+    }
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
