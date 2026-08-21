@@ -73,6 +73,15 @@
             "command": "~/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
       }
     ]
   },
@@ -83,13 +92,21 @@
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "heroflow@Heroflow": true
+    "heroflow@Heroflow": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "gcx@gcx-marketplace": true
   },
   "extraKnownMarketplaces": {
     "Heroflow": {
       "source": {
         "source": "git",
         "url": "https://github.com/deliveryhero/pd-heroflow.git"
+      }
+    },
+    "gcx-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "grafana/gcx"
       }
     }
   },
