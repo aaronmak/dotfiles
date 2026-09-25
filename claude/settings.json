@@ -113,5 +113,6 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
   "theme": "dark",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "model": "sonnet"
 }
